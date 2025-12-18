@@ -37,5 +37,6 @@ git clone https://github.com/amanannn/embodied-ai-journey.git
 cd embodied-ai-journey
 pip install -r requirements.txt# embodied-ai-journey
 My undergraduate journey toward embodied intelligence — from microcontrollers to ROS2 and reinforcement learning.
-# test
-# test
+
+
+测试脚本
