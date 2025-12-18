@@ -1,17 +1,14 @@
 #!/bin/bash
 set -e
+cd "$(git rev-parse --show-toplevel)" || { echo "❌ 不在 Git 仓库中"; exit 1; }
 BRANCH=$(git branch --show-current)
 REMOTE="origin"
 echo "🚀 当前分支: $BRANCH"
-if ! git diff --quiet || ! git ls-files --others --exclude-standard | grep -q .; then
-    if ! git diff --cached --quiet; then
-        echo "✅ 有更改待提交"
-    else
-        echo "⚠️  工作区干净，无更改需要提交"
-        exit 0
-    fi
+if git diff --quiet && git diff --cached --quiet && [ -z "$(git ls-files --others --exclude-standard)" ]; then
+    echo "⚠️  工作区干净，无更改需要提交"
+    exit 0
 else
-    echo "📝 添加所有更改..."
+    echo "📝 添加所有更改（包括新文件）..."
     git add .
 fi
 COMMIT_MSG="${1:-chore: auto-commit}"
