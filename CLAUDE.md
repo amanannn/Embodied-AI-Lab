@@ -4,8 +4,6 @@
 
 **具身智能实验课** — 实验驱动的中文具身智能入门课程。每个实验是一个独立、可运行、有可视化的 Python 项目。核心理念：**先跑代码，再理解理论。**
 
-与 [Embodied-AI-Guide](https://github.com/TianxingChen/Embodied-AI-Guide)（百科全书式知识地图）互补而非竞争。它告诉学习者"有什么、去哪学"，我们带学习者"亲手做出来"。
-
 ## 目录结构
 
 ```
@@ -59,9 +57,7 @@ experiments/
 - 不要假设学习者有 ROS2/Isaac/真实机器人
 - 不要在单个实验里覆盖太多主题——做深一个，不做宽十个
 
-## 相关项目（了解即可，避免重复造轮子）
+## 参考项目
 
-- Embodied-AI-Guide — 百科全书式中文知识地图，13k+ stars
-- Datawhale Dive-into-Embodied-AI — 求职导向的具身智能教程
-- PKU EPIC Lab embodied-ai-start — 北大出品的入门指南
 - rlabbe/Kalman-and-Bayesian-Filters-in-Python — 经典 KF 英文教程
+- PythonRobotics — 纯 Python 机器人算法集
