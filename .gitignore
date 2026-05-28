@@ -31,6 +31,7 @@ ENV/
 # Logs and databases
 *.log
 *.sqlite
+experiments/01-perception/level-1-python/output/
 
 # IDE
 .vscode/
