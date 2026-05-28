@@ -1,4 +1,5 @@
 import pathlib
+import subprocess
 import unittest
 
 
@@ -39,17 +40,29 @@ MAP_README_EN = ROOT / "docs/curriculum/legacy-to-direction-map.en.md"
 
 
 class PublicBilingualDocsTest(unittest.TestCase):
+    def _is_tracked(self, path: str) -> bool:
+        result = subprocess.run(
+            ["git", "ls-files", "--error-unmatch", path],
+            cwd=ROOT,
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+            check=False,
+        )
+        return result.returncode == 0
+
     def test_public_bilingual_files_exist(self) -> None:
         missing = [path for path in PUBLIC_DOCS if not (ROOT / path).is_file()]
         self.assertEqual(missing, [], f"Missing public bilingual files: {missing}")
 
-    def test_private_agent_files_absent(self) -> None:
-        present = [path for path in PRIVATE_FILES if (ROOT / path).exists()]
-        self.assertEqual(present, [], f"Private files should be absent: {present}")
+    def test_private_agent_files_not_tracked(self) -> None:
+        tracked = [path for path in PRIVATE_FILES if self._is_tracked(path)]
+        self.assertEqual(tracked, [], f"Private files should not be tracked: {tracked}")
 
-    def test_private_agent_directories_absent(self) -> None:
-        present = [path for path in PRIVATE_DIRS if (ROOT / path).exists()]
-        self.assertEqual(present, [], f"Private directories should be absent: {present}")
+    def test_private_agent_directories_not_tracked(self) -> None:
+        tracked = [path for path in PRIVATE_DIRS if self._is_tracked(path)]
+        self.assertEqual(
+            tracked, [], f"Private directories should not be tracked: {tracked}"
+        )
 
     def test_root_homepage_has_language_links(self) -> None:
         zh = ROOT_README.read_text(encoding="utf-8")
