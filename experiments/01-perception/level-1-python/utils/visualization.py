@@ -24,6 +24,11 @@ COLORS = {
     "ekf": "#ffaa00",
     "ukf": "#aa44ff",
     "pf": "#ff66aa",
+    "gps": "#00ccff",
+    "lidar": "#ff8800",
+    "imu": "#ff44ff",
+    "odom": "#ffff00",
+    "fused": "#ffffff",
 }
 
 

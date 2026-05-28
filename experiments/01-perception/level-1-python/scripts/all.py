@@ -1,4 +1,4 @@
-"""四合一对比 Demo — 同一轨迹，四种滤波方案。
+"""四合一对比 — 同一轨迹，四种滤波方案。
 
 在同一条真实轨迹上，分别运行 KF、EKF、UKF、PF，
 生成并排对比图和 RMSE 柱状图，终端打印汇总表格。
@@ -7,7 +7,7 @@ KF 使用线性位置观测，EKF/UKF/PF 使用雷达 range-bearing 观测。
 所有滤波器在笛卡尔坐标系中计算 RMSE，确保公平对比。
 
 用法:
-    python demos/demo_all.py
+    python scripts/all.py
 """
 
 import sys
@@ -103,7 +103,7 @@ def main():
         true_pos, results,
         OUT_DIR / "all_filters_comparison.png")
 
-    print("\nDone. All demos complete. Output in output/")
+    print("\nDone. All scripts complete. Output in output/")
     print("  - kf_static.png / kf_animated.gif")
     print("  - ekf_static.png / ekf_animated.gif")
     print("  - ukf_static.png / ukf_animated.gif")

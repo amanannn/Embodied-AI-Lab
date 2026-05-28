@@ -16,7 +16,7 @@
 
 | Legacy experiment | New direction home | Planned identity |
 |---|---|---|
-| `01-kalman-filter` | `experiments/01-perception/` | `p01-state-estimation-kalman` |
+| ~~`01-kalman-filter`~~ | `experiments/01-perception/level-1-python/` | `p01-state-estimation-kalman` (migrated) |
 | `02-particle-filter-mcl` | `experiments/02-slam-navigation/` | `s01-mcl-localization` |
 | `03-ekf-slam` | `experiments/02-slam-navigation/` | `s02-ekf-slam` |
 | `04-robot-sim` | `experiments/09-sim-to-real/` | `r01-sim2d-foundation` |

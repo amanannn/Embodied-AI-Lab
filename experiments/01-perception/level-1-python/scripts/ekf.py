@@ -7,7 +7,7 @@
 EKF 用雅可比矩阵对非线性函数做局部线性化。
 
 用法:
-    python demos/demo_ekf.py
+    python scripts/ekf.py
 """
 
 import sys
@@ -76,7 +76,7 @@ def main():
         dt=DT, total_time=TOTAL_TIME)
 
     print(f"\n  [EKF 原理] 每步用雅可比矩阵在当前点'画切线'来近似非线性观测函数。")
-    print("  Done. EKF demo complete.")
+    print("  Done. EKF script complete.")
 
 
 if __name__ == "__main__":

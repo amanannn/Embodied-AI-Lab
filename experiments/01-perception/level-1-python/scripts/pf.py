@@ -10,7 +10,7 @@
     重采样：淘汰坏粒子，复制好粒子
 
 用法:
-    python demos/demo_pf.py
+    python scripts/pf.py
 """
 
 import sys
@@ -83,7 +83,7 @@ def main():
 
     print(f"\n  [PF 原理] {N_PARTICLES} 个粒子 → 预测 → 加权 → 重采样。")
     print("  不假设高斯分布，可以处理任意分布。")
-    print("  Done. PF demo complete.")
+    print("  Done. PF script complete.")
 
 
 if __name__ == "__main__":

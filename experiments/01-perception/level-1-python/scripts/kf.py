@@ -1,10 +1,10 @@
-"""线性卡尔曼滤波 Demo — 2D 匀速目标追踪。
+"""线性卡尔曼滤波 — 2D 匀速目标追踪。
 
 传感器直接输出物体的 [x, y] 坐标（带高斯噪声）。
 这是最经典、最简单的 KF 使用场景。
 
 用法:
-    python demos/demo_kf.py
+    python scripts/kf.py
 """
 
 import sys
@@ -66,7 +66,7 @@ def main():
         obs_label="Noisy Position Obs",
         dt=DT, total_time=TOTAL_TIME)
 
-    print("\nDone. KF demo complete.")
+    print("\nDone. KF script complete.")
 
 
 if __name__ == "__main__":

@@ -65,7 +65,7 @@ This section emphasizes the repository state of each direction: where it sits to
 
 | Direction | Role in This Repository | Current Entry |
 |---|---|---|
-| 01. Perception | Provides the first runnable state-estimation baseline. | Start with `experiments/01-kalman-filter`, then map forward into `experiments/01-perception/`. |
+| 01. Perception | Provides the first runnable state-estimation baseline. | Start at `experiments/01-perception/level-1-python`, which contains the full Kalman filter lab. |
 | 02. SLAM and Navigation | Extends estimation into localization, mapping, and planning loops. | Currently represented by direction pages and structure, with future MCL, EKF-SLAM, and planning work. |
 | 03. Motion Control | Opens the path from sensing loops to action loops. | Currently represented by direction pages and structure for PID and trajectory work. |
 | 04. RL and Imitation | Adds policy learning once simulation anchors are mature. | Currently represented by direction pages and scaffold only. |
@@ -153,12 +153,21 @@ tests/
 
 ### Python path
 
-The strongest runnable entry point today is still the Kalman filter lab:
+The perception direction contains two complete experiments: sensor fundamentals and Kalman filters.
 
 ```bash
-pip install -r experiments/01-kalman-filter/requirements.txt
-cd experiments/01-kalman-filter
-python demos/demo_all.py
+cd experiments/01-perception/level-1-python
+pip install -r requirements.txt
+
+# Experiment 1: Sensor Fundamentals & Noise Modeling
+python scripts/noise.py        # Noise type comparison
+python scripts/sensors.py      # Multi-sensor comparison
+python scripts/fusion.py       # Fusion result
+
+# Experiment 2: Kalman Filter Family
+python scripts/kf.py           # Single filter
+python scripts/all.py          # Four-filter comparison
+python scripts/kf_tuning.py    # Parameter experiments
 ```
 
 ### C++ or mixed path

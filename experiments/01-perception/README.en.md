@@ -12,19 +12,61 @@ Perception is the input layer for estimation, planning, and control. Without a r
 
 ## Level Structure
 
-- `level-1-python`: state estimation, grounding, and lightweight perception experiments
+- `level-1-python`: sensor simulation, noise modeling, state estimation, and multi-sensor fusion
 - `level-2-cpp-or-mixed`: C++ Kalman and point cloud strengthening
 - `level-3-research`: richer fusion, multimodal perception, and open-vocabulary directions
 
+## Level 1 Experiments
+
+### Experiment 1: Sensor Fundamentals & Noise Modeling
+
+Build a sensor simulation pipeline from scratch: understand noise → simulate sensors → fuse multiple sensors.
+
+| Module | Content |
+|---|---|
+| `noise.py` | Four noise models (Gaussian, bias, drift, outliers) |
+| `sensors/` | GPS, LiDAR, IMU, and odometry sensor simulation |
+| `fusion.py` | Multi-sensor weighted fusion |
+| `scripts/noise.py` | Noise type comparison experiment |
+| `scripts/sensors.py` | Multi-sensor comparison + CSV data output |
+| `scripts/fusion.py` | Fusion result comparison |
+
+### Experiment 2: Kalman Filter Family
+
+Four filter implementations: KF → EKF → UKF → PF.
+
+| Filter | When to Use |
+|---|---|
+| Linear Kalman Filter (KF) | Linear systems with Gaussian noise |
+| Extended Kalman Filter (EKF) | Nonlinear observations (radar, LiDAR) |
+| Unscented Kalman Filter (UKF) | Strong nonlinearity, no derivatives needed |
+| Particle Filter (PF) | Arbitrary distributions, multimodal scenarios |
+
+### Quick Start
+
+```bash
+cd experiments/01-perception/level-1-python
+pip install -r requirements.txt
+
+# Sensor fundamentals
+python scripts/noise.py        # Noise comparison plot
+python scripts/sensors.py      # Multi-sensor comparison + CSV
+python scripts/fusion.py       # Fusion result
+
+# Kalman filters
+python scripts/kf.py           # Single filter
+python scripts/all.py          # Four-filter comparison
+python scripts/kf_tuning.py    # Parameter experiments
+```
+
+See `level-1-python/tutorials/` for full walkthroughs.
+
 ## Representative Experiments
 
-- `p01-state-estimation-kalman`
-- `p02-vlm-grounding`
+- `p01-sensor-fundamentals` — sensor simulation and noise modeling (landed)
+- `p01-state-estimation-kalman` — four-filter implementation (landed)
+- `p02-vlm-grounding` — visual-language grounding (planned)
 - future point-cloud and multi-sensor bridge experiments
-
-## Suggested Entry Point
-
-Start with Kalman-based state estimation to build intuition for noise, observations, and uncertainty before moving into richer perception tasks.
 
 ## Research Extensions
 

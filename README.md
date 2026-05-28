@@ -65,7 +65,7 @@ C++ 用来进入更强的工程实现。
 
 | 方向 | 在本仓库中的角色 | 当前入口 |
 |---|---|---|
-| 01. 感知 | 提供第一个可运行的状态估计基线。 | 先从 `experiments/01-kalman-filter` 开始，再映射到 `experiments/01-perception/`。 |
+| 01. 感知 | 提供第一个可运行的状态估计基线。 | 从 `experiments/01-perception/level-1-python` 开始，内含卡尔曼滤波完整实验。 |
 | 02. SLAM 与导航 | 把状态估计扩展到定位、建图与规划闭环。 | 目前以方向页和骨架为主，后续承接 MCL、EKF-SLAM 与规划。 |
 | 03. 运动控制 | 提供从感知闭环走向行动闭环的入口。 | 当前以方向页和结构骨架承接 PID 与轨迹方向。 |
 | 04. 强化学习与模仿学习 | 在仿真基础成熟后承接策略学习。 | 当前以方向页和骨架为主。 |
@@ -153,12 +153,21 @@ tests/
 
 ### Python 路径
 
-当前最完整的可运行入口仍然是卡尔曼滤波实验：
+感知方向包含两个完整实验：传感器基础和卡尔曼滤波。
 
 ```bash
-pip install -r experiments/01-kalman-filter/requirements.txt
-cd experiments/01-kalman-filter
-python demos/demo_all.py
+cd experiments/01-perception/level-1-python
+pip install -r requirements.txt
+
+# 实验 1：传感器基础与噪声建模
+python scripts/noise.py        # 噪声类型对比
+python scripts/sensors.py      # 多传感器对比
+python scripts/fusion.py       # 融合效果
+
+# 实验 2：卡尔曼滤波家族
+python scripts/kf.py           # 单滤波器
+python scripts/all.py          # 四合一对比
+python scripts/kf_tuning.py    # 参数实验
 ```
 
 ### C++ 或混合路径

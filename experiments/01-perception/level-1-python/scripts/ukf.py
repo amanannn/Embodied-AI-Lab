@@ -7,7 +7,7 @@
 在非线性较强的场景下，UKF 的精度通常比 EKF 高一阶。
 
 用法:
-    python demos/demo_ukf.py
+    python scripts/ukf.py
 """
 
 import sys
@@ -80,7 +80,7 @@ def main():
         dt=DT, total_time=TOTAL_TIME)
 
     print(f"\n  [UKF 原理] 用 {2*4+1} 个 sigma 点采样，无需雅可比矩阵，精度比 EKF 高一阶。")
-    print("  Done. UKF demo complete.")
+    print("  Done. UKF script complete.")
 
 
 if __name__ == "__main__":
