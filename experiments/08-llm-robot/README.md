@@ -1,30 +1,32 @@
 # LLM and Robotics
 
+English: [README.en.md](./README.en.md)
+
 ## Core Question
 
-How can language models decompose tasks, invoke tools, and support robot decision-making?
+语言模型如何分解任务、调用工具并支持机器人决策？
 
 ## Why This Direction Matters
 
-Large models are increasingly used as planning and interaction layers, but they must be grounded in executable robot-facing behavior.
+大模型越来越多地被用作规划和交互层，但它们必须扎根于可执行的面向机器人的行为。
 
-This repository's Phase 1 state matters here: the landing page comes first so future tool-using and ROS2-connected agent work has a clear home before any legacy experiments are migrated.
+本仓库的 Phase 1 状态在此很重要：先建立着陆页，以便后续工具使用和 ROS2 连接的智能体工作有明确归属。
 
 ## Level Structure
 
-- `level-1-python`: task decomposition and toy-world tool use
-- `level-2-cpp-or-mixed`: grounded execution interfaces
-- `level-3-research`: long-horizon, multimodal, and agentic robotics systems
+- `level-1-python`：任务分解与玩具世界工具使用
+- `level-2-cpp-or-mixed`：扎根的执行接口
+- `level-3-research`：长期、多模态与智能体机器人系统
 
 ## Representative Experiments
 
 - `a01-llm-task-planning-agent`
-- future tool-using middleware bridges that connect language planning to ROS2 execution
+- 后续连接语言规划到 ROS2 执行的工具使用中间件桥接
 
 ## Suggested Entry Point
 
-Begin with tool-using planning in a constrained environment before attempting real middleware integration. In this repository, Phase 1 means the direction is defined before migrated experiments land, so the page sets scope for later grounded agent work.
+从受限环境中的工具使用规划开始，再尝试真实中间件集成。在本仓库中，Phase 1 意味着方向在迁移实验落地前就已定义，此页面为后续扎根智能体工作设定范围。
 
 ## Research Extensions
 
-Grounded planning, multimodal agents, execution monitoring, and long-horizon robotic task orchestration.
+扎根规划、多模态智能体、执行监控、长期机器人任务编排。

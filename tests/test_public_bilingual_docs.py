@@ -12,8 +12,34 @@ PUBLIC_DOCS = [
     "experiments/01-perception/README.en.md",
     "experiments/02-slam-navigation/README.md",
     "experiments/02-slam-navigation/README.en.md",
+    "experiments/03-motion-control/README.md",
+    "experiments/03-motion-control/README.en.md",
+    "experiments/04-rl-imitation/README.md",
+    "experiments/04-rl-imitation/README.en.md",
+    "experiments/05-world-model/README.md",
+    "experiments/05-world-model/README.en.md",
+    "experiments/06-vision-language-navigation/README.md",
+    "experiments/06-vision-language-navigation/README.en.md",
+    "experiments/07-manipulation/README.md",
+    "experiments/07-manipulation/README.en.md",
+    "experiments/08-llm-robot/README.md",
+    "experiments/08-llm-robot/README.en.md",
+    "experiments/09-sim-to-real/README.md",
+    "experiments/09-sim-to-real/README.en.md",
+    "experiments/10-vertical-apps/README.md",
+    "experiments/10-vertical-apps/README.en.md",
     "shared/README.md",
     "shared/README.en.md",
+    "shared/sim2d/README.md",
+    "shared/sim2d/README.en.md",
+    "shared/viz/README.md",
+    "shared/viz/README.en.md",
+    "shared/math/README.md",
+    "shared/math/README.en.md",
+    "shared/ros2_interfaces/README.md",
+    "shared/ros2_interfaces/README.en.md",
+    "shared/datasets/README.md",
+    "shared/datasets/README.en.md",
     "docs/curriculum/legacy-to-direction-map.md",
     "docs/curriculum/legacy-to-direction-map.en.md",
 ]
@@ -93,6 +119,35 @@ class PublicBilingualDocsTest(unittest.TestCase):
         en = MAP_README_EN.read_text(encoding="utf-8")
         self.assertIn("English: [legacy-to-direction-map.en.md](./legacy-to-direction-map.en.md)", zh)
         self.assertIn("中文： [legacy-to-direction-map.md](./legacy-to-direction-map.md)", en)
+
+    def test_batch2_direction_pages_have_language_links(self) -> None:
+        """第二批方向页（03-10）必须有双向语言链接。"""
+        batch2_dirs = [
+            "03-motion-control",
+            "04-rl-imitation",
+            "05-world-model",
+            "06-vision-language-navigation",
+            "07-manipulation",
+            "08-llm-robot",
+            "09-sim-to-real",
+            "10-vertical-apps",
+        ]
+        for d in batch2_dirs:
+            with self.subTest(direction=d):
+                zh = (ROOT / f"experiments/{d}/README.md").read_text(encoding="utf-8")
+                en = (ROOT / f"experiments/{d}/README.en.md").read_text(encoding="utf-8")
+                self.assertIn("English: [README.en.md](./README.en.md)", zh)
+                self.assertIn("中文： [README.md](./README.md)", en)
+
+    def test_shared_submodule_pages_have_language_links(self) -> None:
+        """shared/ 子模块页必须有双向语言链接。"""
+        submodules = ["sim2d", "viz", "math", "ros2_interfaces", "datasets"]
+        for mod in submodules:
+            with self.subTest(module=mod):
+                zh = (ROOT / f"shared/{mod}/README.md").read_text(encoding="utf-8")
+                en = (ROOT / f"shared/{mod}/README.en.md").read_text(encoding="utf-8")
+                self.assertIn("English: [README.en.md](./README.en.md)", zh)
+                self.assertIn("中文： [README.md](./README.md)", en)
 
 
 if __name__ == "__main__":

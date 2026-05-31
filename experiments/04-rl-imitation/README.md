@@ -1,18 +1,20 @@
 # RL and Imitation
 
+English: [README.en.md](./README.en.md)
+
 ## Core Question
 
-How does a robot learn behavior from reward signals, demonstrations, or iterative policy improvement?
+机器人如何从奖励信号、示教或策略迭代中学习行为？
 
 ## Why This Direction Matters
 
-Learning-based behavior becomes important when hand-designed control logic is too brittle or too expensive to specify directly.
+当手写控制逻辑过于脆弱或成本太高时，基于学习的行为变得重要。
 
 ## Level Structure
 
-- `level-1-python`: Q-learning, deep RL, and imitation learning
-- `level-2-cpp-or-mixed`: deployment and policy interface strengthening
-- `level-3-research`: sim-to-real RL, offline RL, and transfer extensions
+- `level-1-python`：Q-learning、深度强化学习与模仿学习
+- `level-2-cpp-or-mixed`：部署与策略接口强化
+- `level-3-research`：sim-to-real RL、离线 RL 与迁移扩展
 
 ## Representative Experiments
 
@@ -22,8 +24,8 @@ Learning-based behavior becomes important when hand-designed control logic is to
 
 ## Suggested Entry Point
 
-Use tabular Q-learning to build intuition before moving into deep policies or imitation-based behavior.
+先用表格 Q-learning 建立直觉，再进入深度策略或基于示教的行为学习。
 
 ## Research Extensions
 
-Offline RL, policy transfer, safer exploration, and demonstration-efficient learning.
+离线 RL、策略迁移、安全探索、示教高效学习。

@@ -1,17 +1,19 @@
 # ros2_interfaces
 
-This module will define the boundary between the educational experiments and ROS2-facing integration work.
+English: [README.en.md](./README.en.md)
+
+本模块将定义教育实验与 ROS2 集成工作之间的边界。
 
 ## Intended Ownership
 
-- thin wrappers around ROS2 integration points
-- shared conventions for publishers, subscribers, or messages
-- bridge code used by mixed Python and C++ direction labs
+- ROS2 集成点的薄包装
+- 发布者、订阅者或消息的共享约定
+- 混合 Python 和 C++ 方向实验共用的桥接代码
 
 ## Out of Scope
 
-The following does not belong here:
+以下内容不属于此处：
 
-- full application nodes owned by one capstone or direction
-- hardware bring-up notes for a single robot platform
-- experiment-local callbacks or launch setups that are not reused outside one lab
+- 单个顶石项目或方向拥有的完整应用节点
+- 单个机器人平台的硬件启动笔记
+- 未在单个实验之外复用的实验本地回调或启动配置

@@ -1,18 +1,20 @@
 # Vertical Applications
 
+English: [README.en.md](./README.en.md)
+
 ## Core Question
 
-How do embodied AI systems become useful in real scenario-specific environments such as inspection or industrial workflows?
+具身 AI 系统如何在巡检或工业流程等真实场景环境中变得有用？
 
 ## Why This Direction Matters
 
-Application directions force the curriculum to integrate perception, planning, control, and systems thinking under concrete operational constraints.
+应用方向迫使课程在具体操作约束下整合感知、规划、控制和系统思维。
 
 ## Level Structure
 
-- `level-1-python`: scenario-scoped application exercises
-- `level-2-cpp-or-mixed`: integrated capstones
-- `level-3-research`: domain-specific system design extensions
+- `level-1-python`：场景范围的应用练习
+- `level-2-cpp-or-mixed`：集成顶石项目
+- `level-3-research`：领域特定的系统设计扩展
 
 ## Representative Experiments
 
@@ -20,8 +22,8 @@ Application directions force the curriculum to integrate perception, planning, c
 
 ## Suggested Entry Point
 
-Enter this direction after completing at least one perception path and one control or navigation path.
+完成至少一条感知路径和一条控制或导航路径后，再进入此方向。
 
 ## Research Extensions
 
-Inspection, manufacturing, warehousing, and domain-specific embodied system design under operational constraints.
+巡检、制造、仓储、操作约束下的领域特定具身系统设计。

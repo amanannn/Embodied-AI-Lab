@@ -1,3 +1,5 @@
-# Pid Control
+# PID Control
+
+English: [README.en.md](./README.en.md)
 
 > 🚧 建设中

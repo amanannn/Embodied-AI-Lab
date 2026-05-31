@@ -1,18 +1,20 @@
 # viz
 
-This module will host reusable visualization utilities shared across directions.
+English: [README.en.md](./README.en.md)
+
+本模块将承载跨方向复用的可视化工具。
 
 ## Intended Ownership
 
-- plotting helpers
-- animation helpers
-- style presets
-- comparison dashboards used by multiple labs
+- 绘图辅助函数
+- 动画辅助函数
+- 样式预设
+- 多实验共用的对比仪表盘
 
 ## Out of Scope
 
-The following does not belong here:
+以下内容不属于此处：
 
-- screenshots or media assets owned by a single experiment
-- figures whose labels, metrics, or layout only make sense for one lab report
-- ad hoc notebook plotting code that has not been generalized for reuse
+- 单个实验拥有的截图或媒体资源
+- 标签、指标或布局仅对单个实验报告有意义的图表
+- 尚未泛化为可复用代码的临时 notebook 绘图代码

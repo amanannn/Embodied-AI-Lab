@@ -1,30 +1,32 @@
 # Simulation and Sim-to-Real
 
+English: [README.en.md](./README.en.md)
+
 ## Core Question
 
-How do we build training environments in simulation and reduce the gap to real embodied systems?
+如何在仿真中构建训练环境并减少与真实具身系统的差距？
 
 ## Why This Direction Matters
 
-Simulation is where experimentation becomes scalable, but transfer quality determines whether that work matters outside the simulator.
+仿真实验是可扩展的，但迁移质量决定了这些工作是否在仿真器之外有意义。
 
-Phase 1 gives this direction immediate repository relevance because `04-robot-sim` maps here and future reusable simulator pieces are expected to move into `shared/sim2d` instead of staying buried in one experiment.
+Phase 1 给此方向带来直接的仓库关联：`04-robot-sim` 映射到此，未来可复用的仿真器组件预计将迁移到 `shared/sim2d` 而非埋在单个实验中。
 
 ## Level Structure
 
-- `level-1-python`: simulator foundations and domain-randomization concepts
-- `level-2-cpp-or-mixed`: richer simulator bridges and migration-oriented engineering
-- `level-3-research`: transfer, identification, and digital-twin extensions
+- `level-1-python`：仿真器基础与域随机化概念
+- `level-2-cpp-or-mixed`：更丰富的仿真器桥接与迁移导向的工程
+- `level-3-research`：迁移、辨识与数字孪生扩展
 
 ## Representative Experiments
 
 - `r01-sim2d-foundation`
-- future migration bridges from `04-robot-sim` into direction-local labs and `shared/sim2d`
+- 后续从 `04-robot-sim` 迁移到方向内实验和 `shared/sim2d` 的桥接
 
 ## Suggested Entry Point
 
-Use the simplified simulator foundation to understand world stepping and observation loops before transfer-focused work. In Phase 1, this page clarifies that the repository does not yet contain migrated experiments here even though the direction already owns the sim-to-real path.
+使用简化仿真器基础理解世界步进和观测循环，再进入迁移导向的工作。在 Phase 1，此页面明确仓库尚未包含此方向的迁移实验，即使方向已拥有 sim-to-real 路径。
 
 ## Research Extensions
 
-Domain randomization, system identification, simulator fidelity tradeoffs, and transfer diagnostics.
+域随机化、系统辨识、仿真器保真度权衡、迁移诊断。

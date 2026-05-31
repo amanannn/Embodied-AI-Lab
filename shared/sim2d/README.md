@@ -1,18 +1,20 @@
 # sim2d
 
-This module will host lightweight two-dimensional simulation infrastructure extracted from course experiments.
+English: [README.en.md](./README.en.md)
+
+本模块将承载从课程实验中抽取的轻量二维仿真基础设施。
 
 ## Intended Ownership
 
-- common world stepping logic
-- robot state update helpers
-- sensor simulation hooks
-- obstacle and map primitives used by multiple directions
+- 通用世界步进逻辑
+- 机器人状态更新辅助函数
+- 传感器仿真钩子
+- 多方向共用的障碍物和地图原语
 
 ## Out of Scope
 
-The following does not belong here:
+以下内容不属于此处：
 
-- one-off scenario logic for a single navigation or control lab
-- experiment-specific reward shaping or curriculum code
-- simulator wrappers whose API is still changing as part of one direction's lesson flow
+- 单个导航或控制实验的一次性场景逻辑
+- 实验特定的奖励塑形或课程代码
+- 作为某方向课程流的一部分仍在变化的仿真器包装器

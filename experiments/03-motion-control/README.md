@@ -1,29 +1,31 @@
 # Motion Control
 
+English: [README.en.md](./README.en.md)
+
 ## Core Question
 
-How does a robot track desired motion accurately, robustly, and with interpretable feedback behavior?
+机器人如何准确、鲁棒地跟踪期望运动，并提供可解释的反馈行为？
 
 ## Why This Direction Matters
 
-Control is where models, sensors, and actuators become reliable physical motion instead of just desired trajectories.
+控制是让模型、传感器和执行器从"期望轨迹"变成"可靠物理运动"的关键环节。
 
 ## Level Structure
 
-- `level-1-python`: PID and trajectory optimization
-- `level-2-cpp-or-mixed`: real-time control strengthening
-- `level-3-research`: robust control, MPC, force control, and safety constraints
+- `level-1-python`：PID 与轨迹优化
+- `level-2-cpp-or-mixed`：实时控制强化
+- `level-3-research`：鲁棒控制、MPC、力控与安全约束
 
 ## Representative Experiments
 
 - `c01-pid-control-lab`
 - `c02-trajectory-optimization`
-- future realtime bridge work
+- 后续实时桥接工作
 
 ## Suggested Entry Point
 
-Start with PID, then use trajectory optimization to connect feedback control with smoother motion generation.
+从 PID 入手，再用轨迹优化把反馈控制与更平滑的运动生成连接起来。
 
 ## Research Extensions
 
-Force control, impedance behavior, MPC, and disturbance-robust control in more realistic systems.
+力控、阻抗行为、MPC、扰动鲁棒控制等更真实系统中的研究方向。

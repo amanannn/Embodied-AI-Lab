@@ -1,3 +1,5 @@
 # dynamics
 
-> 建设中
+English: [README.en.md](./README.en.md)
+
+> 🚧 建设中

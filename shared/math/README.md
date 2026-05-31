@@ -1,18 +1,20 @@
 # math
 
-This module will host reusable math and geometry helpers once they are no longer specific to a single experiment.
+English: [README.en.md](./README.en.md)
+
+本模块将承载不再特定于单个实验的可复用数学和几何辅助函数。
 
 ## Intended Ownership
 
-- matrix and transform helpers
-- shared estimation utilities
-- common coordinate conversion code
-- numerical helpers reused across direction labs
+- 矩阵和变换辅助函数
+- 共享估计工具
+- 通用坐标转换代码
+- 跨方向实验复用的数值辅助函数
 
 ## Out of Scope
 
-The following does not belong here:
+以下内容不属于此处：
 
-- derivations that are only used to explain a single lesson
-- controller-specific tuning constants or model parameters for one experiment
-- partially generalized helpers that still depend on one lab's state shape or naming scheme
+- 仅用于解释单个课程的推导
+- 单个实验的控制器特定调参常量或模型参数
+- 仍依赖单个实验状态形状或命名方案的部分泛化辅助函数
