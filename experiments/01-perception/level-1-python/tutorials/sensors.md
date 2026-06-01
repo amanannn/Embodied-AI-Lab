@@ -1,5 +1,7 @@
 # 传感器基础与噪声建模 —— 从零理解传感器数据
 
+English: [sensors.en.md](./sensors.en.md)
+
 > 配合 `noise.py`、`sensors/`、`fusion.py` 和 `scripts/` 目录下的代码食用。本文假设你只会 Python 基础，没有任何信号处理背景。
 
 ---
@@ -233,7 +235,7 @@ fused = weighted_fusion(readings, weights)
 
 不同传感器采样率不同，需要先对齐时间戳再融合。
 
-**代码位置**：`fusion.py` → `align_readings()`
+**代码位置**：`fusion.py` → `time_align()`
 
 ---
 
