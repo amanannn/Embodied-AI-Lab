@@ -165,7 +165,10 @@ python scripts/sensors.py      # Multi-sensor comparison
 python scripts/fusion.py       # Fusion result
 
 # Experiment 2: Kalman Filter Family
-python scripts/kf.py           # Single filter
+python scripts/kf.py           # Linear KF
+python scripts/ekf.py          # Extended Kalman Filter
+python scripts/ukf.py          # Unscented Kalman Filter
+python scripts/pf.py           # Particle Filter
 python scripts/all.py          # Four-filter comparison
 python scripts/kf_tuning.py    # Parameter experiments
 ```

@@ -165,7 +165,10 @@ python scripts/sensors.py      # 多传感器对比
 python scripts/fusion.py       # 融合效果
 
 # 实验 2：卡尔曼滤波家族
-python scripts/kf.py           # 单滤波器
+python scripts/kf.py           # 线性 KF
+python scripts/ekf.py          # 扩展卡尔曼滤波
+python scripts/ukf.py          # 无迹卡尔曼滤波
+python scripts/pf.py           # 粒子滤波
 python scripts/all.py          # 四合一对比
 python scripts/kf_tuning.py    # 参数实验
 ```
