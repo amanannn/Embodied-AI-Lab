@@ -61,10 +61,27 @@ python scripts/kf_tuning.py    # 参数实验
 
 详细教程见 `level-1-python/tutorials/`。
 
+## 视觉子路线
+
+当前 Level 1 已完成传感器仿真与状态估计两条主线，并开始扩展第三条子路线：**基础视觉**。
+
+当前进度：
+
+| 实验 | 核心问题 | 硬件需求 | 状态 |
+|------|---------|---------|------|
+| 相机标定 | 如何从棋盘格图像得到内参和畸变系数？ | USB 摄像头 | 已落地 |
+| ArUco / AprilTag 检测 | 如何实时检测标记并估计 6DoF 位姿？ | USB 摄像头 | 规划中 |
+| 经典 OpenCV 视觉 | 光流、特征匹配、背景减除能做什么？ | USB 摄像头 | 规划中 |
+
+这些实验与传感器/滤波器主线并行，不改动现有结构。
+
+推荐硬件配置：USB 摄像头，640×480 @ 30fps。
+
 ## Representative Experiments
 
 - `p01-sensor-fundamentals` — 传感器仿真与噪声建模（已落地）
 - `p01-state-estimation-kalman` — 四种滤波器完整实现（已落地）
+- `p01-camera-calibration` — USB 摄像头棋盘格标定（已落地）
 - `p02-vlm-grounding` — 视觉语言 grounding（规划中）
 - 后续点云与多传感器融合桥接实验
 

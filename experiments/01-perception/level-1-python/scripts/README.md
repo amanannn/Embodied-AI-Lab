@@ -13,6 +13,7 @@
 | `pf.py` | 粒子滤波 | `output/pf_static.png`, `output/pf_animated.gif` |
 | `all.py` | 四合一对比 | `output/all_filters_comparison.png` |
 | `kf_tuning.py` | 参数调优实验（五组对比） | `output/kf_tuning_comparison.png` |
+| `camera_calibration.py` | USB 摄像头棋盘格标定 | `output/camera_calibration.json`, `output/camera_calibration/` |
 
 ## 运行方式
 
@@ -33,6 +34,10 @@ python scripts/kf_tuning.py    # 参数调优实验
 
 # 使用外部数据（实验性入口）
 python scripts/kf.py --data path/to/preprocessed_position_data.csv
+
+# 视觉：相机标定
+python scripts/camera_calibration.py --generate-board
+python scripts/camera_calibration.py --input-dir calibration_images
 ```
 
 ## 输出文件说明
@@ -43,3 +48,5 @@ python scripts/kf.py --data path/to/preprocessed_position_data.csv
 - `*_animated.gif` — 追踪动画
 - `sensor_data.csv` — 传感器仿真导出数据（原始多传感器混合流，用于观察数据格式与后续预处理）
 - `all_filters_comparison.png` — 四种滤波器并排对比 + RMSE 柱状图
+- `camera_calibration.json` — 相机内参、畸变系数、重投影误差与有效图片清单
+- `camera_calibration/` — 角点检测预览与去畸变预览图

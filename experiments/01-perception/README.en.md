@@ -61,10 +61,27 @@ python scripts/kf_tuning.py    # Parameter experiments
 
 See `level-1-python/tutorials/` for full walkthroughs.
 
+## Vision Track
+
+Level 1 currently covers sensor simulation and state estimation, and now starts a third sub-track: **basic vision**.
+
+Current progress:
+
+| Experiment | Core Question | Hardware | Status |
+|-----------|--------------|----------|--------|
+| Camera Calibration | How to get intrinsics and distortion coefficients from checkerboard images? | USB webcam | Landed |
+| ArUco / AprilTag Detection | How to detect markers and estimate 6DoF pose in real time? | USB webcam | Planned |
+| Classic OpenCV Vision | What can optical flow, feature matching, and background subtraction do? | USB webcam | Planned |
+
+These experiments run in parallel with the sensor/filter track without modifying the current structure.
+
+Recommended hardware config: USB webcam, 640×480 @ 30fps.
+
 ## Representative Experiments
 
 - `p01-sensor-fundamentals` — sensor simulation and noise modeling (landed)
 - `p01-state-estimation-kalman` — four-filter implementation (landed)
+- `p01-camera-calibration` — USB webcam checkerboard calibration (landed)
 - `p02-vlm-grounding` — visual-language grounding (planned)
 - future point-cloud and multi-sensor bridge experiments
 
