@@ -67,3 +67,9 @@ class KfExternalDataContractTest(unittest.TestCase):
         self.assertEqual(timestamps, [0.1, 0.2])
         self.assertEqual(observations, [[1.0, 2.0], [2.0, 3.0]])
         self.assertEqual(len(covariances), 2)
+
+    def test_external_mode_uses_no_ground_truth_visualization_path(self) -> None:
+        content = KF_PATH.read_text(encoding="utf-8")
+        self.assertIn("draw_tracking_figure(", content)
+        self.assertIn("show_error_panel=False", content)
+        self.assertIn('reference_label="Observation Stream"', content)

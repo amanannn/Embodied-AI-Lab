@@ -150,7 +150,9 @@ def main():
             "Kalman Filter — External Data",
             OUT_DIR / "kf_external_static.png",
             est_color=COLORS["kf"],
-            obs_label="CSV Position Obs")
+            obs_label="CSV Position Obs",
+            show_error_panel=False,
+            reference_label="Observation Stream")
 
         obs_step = np.linalg.norm(np.diff(observations, axis=0), axis=1)
         est_step = np.linalg.norm(np.diff(estimates, axis=0), axis=1)

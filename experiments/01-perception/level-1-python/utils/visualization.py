@@ -59,7 +59,8 @@ def uncertainty_ellipse(cov_2x2, n_std=1.0):
 # 单滤波器静态图
 # ═══════════════════════════════════════════════════════════════════════════════
 def draw_tracking_figure(true_pos, obs, est, covs, title, save_path,
-                         est_color=COLORS["est"], obs_label="Observation"):
+                         est_color=COLORS["est"], obs_label="Observation",
+                         show_error_panel=True, reference_label="Ground Truth"):
     """绘制单个滤波器的轨迹对比 + 误差曲线图。
 
     左子图：真实轨迹 / 观测 / 估计轨迹 + 不确定性椭圆
@@ -88,7 +89,7 @@ def draw_tracking_figure(true_pos, obs, est, covs, title, save_path,
     # ── 左子图：轨迹对比 ──
     ax_traj.set_facecolor("#0a0a0a")
     ax_traj.plot(true_pos[:, 0], true_pos[:, 1],
-                 color=COLORS["true"], linewidth=2, label="Ground Truth")
+                 color=COLORS["true"], linewidth=2, label=reference_label)
     ax_traj.plot(obs[:, 0], obs[:, 1],
                  color=COLORS["obs"], linewidth=0.7, alpha=0.6,
                  label=obs_label)
@@ -116,34 +117,53 @@ def draw_tracking_figure(true_pos, obs, est, covs, title, save_path,
     ax_traj.set_aspect("equal")
 
     # ── 右子图：误差随时间变化 ──
-    obs_error = np.linalg.norm(obs - true_pos, axis=1)
-    kf_error = np.linalg.norm(est - true_pos, axis=1)
-
     ax_err.set_facecolor("#0a0a0a")
-    ax_err.fill_between(time, 0, obs_error, color=COLORS["obs"],
-                        alpha=0.12)
-    ax_err.plot(time, obs_error, color=COLORS["obs"], linewidth=0.8,
-                alpha=0.5, label="Observation Error")
-    ax_err.plot(time, kf_error, color=est_color, linewidth=2,
-                label="Kalman Error")
+    if show_error_panel:
+        obs_error = np.linalg.norm(obs - true_pos, axis=1)
+        kf_error = np.linalg.norm(est - true_pos, axis=1)
 
-    obs_rmse = np.sqrt(np.mean(obs_error ** 2))
-    kf_rmse = np.sqrt(np.mean(kf_error ** 2))
-    reduction = (1 - kf_rmse / obs_rmse) * 100 if obs_rmse > 0 else 0
-    ax_err.text(0.98, 0.92,
-                f"Obs RMSE: {obs_rmse:.3f} m\nKF  RMSE: {kf_rmse:.3f} m\n"
-                f"Reduction: {reduction:.1f}%",
-                transform=ax_err.transAxes, ha="right", va="top",
-                fontsize=11, fontfamily="monospace",
-                bbox=dict(boxstyle="round,pad=0.5", facecolor="#111111",
-                          edgecolor="#444444", alpha=0.9),
-                color="#cccccc")
+        ax_err.fill_between(time, 0, obs_error, color=COLORS["obs"],
+                            alpha=0.12)
+        ax_err.plot(time, obs_error, color=COLORS["obs"], linewidth=0.8,
+                    alpha=0.5, label="Observation Error")
+        ax_err.plot(time, kf_error, color=est_color, linewidth=2,
+                    label="Kalman Error")
+
+        obs_rmse = np.sqrt(np.mean(obs_error ** 2))
+        kf_rmse = np.sqrt(np.mean(kf_error ** 2))
+        reduction = (1 - kf_rmse / obs_rmse) * 100 if obs_rmse > 0 else 0
+        ax_err.text(0.98, 0.92,
+                    f"Obs RMSE: {obs_rmse:.3f} m\nKF  RMSE: {kf_rmse:.3f} m\n"
+                    f"Reduction: {reduction:.1f}%",
+                    transform=ax_err.transAxes, ha="right", va="top",
+                    fontsize=11, fontfamily="monospace",
+                    bbox=dict(boxstyle="round,pad=0.5", facecolor="#111111",
+                              edgecolor="#444444", alpha=0.9),
+                    color="#cccccc")
+
+        ax_err.set_ylabel("Position Error [m]", color="#aaaaaa")
+        ax_err.set_title("Error Comparison Over Time", color="#bbbbbb", fontsize=13)
+        ax_err.legend(loc="upper right", facecolor="#111111",
+                      edgecolor="#333333", labelcolor="#cccccc")
+    else:
+        ax_err.text(
+            0.5, 0.55,
+            "No ground-truth trajectory provided.\n"
+            "Use this panel to inspect how the\n"
+            "filtered path smooths the observation stream.",
+            transform=ax_err.transAxes,
+            ha="center",
+            va="center",
+            fontsize=11,
+            bbox=dict(boxstyle="round,pad=0.6", facecolor="#111111",
+                      edgecolor="#444444", alpha=0.9),
+            color="#cccccc",
+        )
+        ax_err.set_ylabel("Interpretation", color="#aaaaaa")
+        ax_err.set_title("External Data Mode", color="#bbbbbb", fontsize=13)
+        ax_err.set_yticks([])
 
     ax_err.set_xlabel("Time [s]", color="#aaaaaa")
-    ax_err.set_ylabel("Position Error [m]", color="#aaaaaa")
-    ax_err.set_title("Error Comparison Over Time", color="#bbbbbb", fontsize=13)
-    ax_err.legend(loc="upper right", facecolor="#111111",
-                  edgecolor="#333333", labelcolor="#cccccc")
     ax_err.grid(True, color=COLORS["grid"], alpha=0.4)
 
     fig.savefig(save_path, dpi=150, bbox_inches="tight",
