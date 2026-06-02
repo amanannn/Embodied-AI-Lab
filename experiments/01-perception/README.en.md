@@ -12,7 +12,7 @@ Perception is the input layer for estimation, planning, and control. Without a r
 
 ## Level Structure
 
-- `level-1-python`: sensor simulation, noise modeling, state estimation, and multi-sensor fusion
+- `level-1-python`: sensor simulation, noise modeling, state estimation, multi-sensor fusion, and basic vision; route entrance: [`level-1-python/README.en.md`](./level-1-python/README.en.md)
 - `level-2-cpp-or-mixed`: C++ Kalman and point cloud strengthening
 - `level-3-research`: richer fusion, multimodal perception, and open-vocabulary directions
 
@@ -63,15 +63,15 @@ See `level-1-python/tutorials/` for full walkthroughs.
 
 ## Vision Track
 
-Level 1 currently covers sensor simulation and state estimation, and now starts a third sub-track: **basic vision**.
+Level 1 now covers three runnable tracks: sensor simulation, state estimation, and basic vision.
 
 Current progress:
 
 | Experiment | Core Question | Hardware | Status |
 |-----------|--------------|----------|--------|
 | Camera Calibration | How to get intrinsics and distortion coefficients from checkerboard images? | USB webcam | Landed |
-| ArUco / AprilTag Detection | How to detect markers and estimate 6DoF pose in real time? | USB webcam | Planned |
-| Classic OpenCV Vision | What can optical flow, feature matching, and background subtraction do? | USB webcam | Planned |
+| ArUco / AprilTag Detection | How to detect markers and estimate 6DoF pose in real time? | USB webcam | Landed |
+| Classic OpenCV Vision | What can optical flow, feature matching, and background subtraction do? | USB webcam or offline sample | Landed |
 
 These experiments run in parallel with the sensor/filter track without modifying the current structure.
 
@@ -82,6 +82,8 @@ Recommended hardware config: USB webcam, 640×480 @ 30fps.
 - `p01-sensor-fundamentals` — sensor simulation and noise modeling (landed)
 - `p01-state-estimation-kalman` — four-filter implementation (landed)
 - `p01-camera-calibration` — USB webcam checkerboard calibration (landed)
+- `p01-aruco-pose` — ArUco / AprilTag detection and single-marker pose estimation (landed)
+- `p01-classic-vision` — optical flow, feature matching, and background subtraction foundations (landed)
 - `p02-vlm-grounding` — visual-language grounding (planned)
 - future point-cloud and multi-sensor bridge experiments
 

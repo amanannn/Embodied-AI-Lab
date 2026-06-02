@@ -111,6 +111,7 @@ PRIVATE_DIRS = [
 
 ROOT_README = ROOT / "README.md"
 ROOT_README_EN = ROOT / "README.en.md"
+BANNER_IMAGE = ROOT / "figure/embodied-ai-lab-banner.png"
 PERCEPTION_README = ROOT / "experiments/01-perception/README.md"
 PERCEPTION_README_EN = ROOT / "experiments/01-perception/README.en.md"
 SLAM_README = ROOT / "experiments/02-slam-navigation/README.md"
@@ -153,6 +154,14 @@ class PublicBilingualDocsTest(unittest.TestCase):
         self.assertIn("中文： [README.md](./README.md)", en)
         self.assertIn("## 这是什么项目", zh)
         self.assertIn("## What This Repository Is", en)
+
+    def test_root_homepage_uses_public_banner_asset(self) -> None:
+        zh = ROOT_README.read_text(encoding="utf-8")
+        en = ROOT_README_EN.read_text(encoding="utf-8")
+        banner = "![Embodied AI Lab banner](./figure/embodied-ai-lab-banner.png)"
+        self.assertTrue(BANNER_IMAGE.is_file(), "Missing root README banner image")
+        self.assertIn(banner, zh)
+        self.assertIn(banner, en)
 
     def test_direction_pages_have_language_links(self) -> None:
         zh = PERCEPTION_README.read_text(encoding="utf-8")

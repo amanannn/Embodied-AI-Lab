@@ -12,7 +12,7 @@ English: [README.en.md](./README.en.md)
 
 ## Level Structure
 
-- `level-1-python`：传感器仿真、噪声建模、状态估计与多传感器融合
+- `level-1-python`：传感器仿真、噪声建模、状态估计、多传感器融合与基础视觉；学习路线见 [`level-1-python/README.md`](./level-1-python/README.md)
 - `level-2-cpp-or-mixed`：C++ Kalman 与点云处理强化
 - `level-3-research`：更丰富的融合、多模态感知与开放词汇方向
 
@@ -63,15 +63,15 @@ python scripts/kf_tuning.py    # 参数实验
 
 ## 视觉子路线
 
-当前 Level 1 已完成传感器仿真与状态估计两条主线，并开始扩展第三条子路线：**基础视觉**。
+当前 Level 1 已完成传感器仿真、状态估计与基础视觉三条主线。
 
 当前进度：
 
 | 实验 | 核心问题 | 硬件需求 | 状态 |
 |------|---------|---------|------|
 | 相机标定 | 如何从棋盘格图像得到内参和畸变系数？ | USB 摄像头 | 已落地 |
-| ArUco / AprilTag 检测 | 如何实时检测标记并估计 6DoF 位姿？ | USB 摄像头 | 规划中 |
-| 经典 OpenCV 视觉 | 光流、特征匹配、背景减除能做什么？ | USB 摄像头 | 规划中 |
+| ArUco / AprilTag 检测 | 如何实时检测标记并估计 6DoF 位姿？ | USB 摄像头 | 已落地 |
+| 经典 OpenCV 视觉 | 光流、特征匹配、背景减除能做什么？ | USB 摄像头或离线样例 | 已落地 |
 
 这些实验与传感器/滤波器主线并行，不改动现有结构。
 
@@ -82,6 +82,8 @@ python scripts/kf_tuning.py    # 参数实验
 - `p01-sensor-fundamentals` — 传感器仿真与噪声建模（已落地）
 - `p01-state-estimation-kalman` — 四种滤波器完整实现（已落地）
 - `p01-camera-calibration` — USB 摄像头棋盘格标定（已落地）
+- `p01-aruco-pose` — ArUco / AprilTag 检测与单标记位姿估计（已落地）
+- `p01-classic-vision` — 光流、特征匹配、背景减除基础视觉（已落地）
 - `p02-vlm-grounding` — 视觉语言 grounding（规划中）
 - 后续点云与多传感器融合桥接实验
 

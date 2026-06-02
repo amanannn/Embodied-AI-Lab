@@ -32,6 +32,12 @@ ENV/
 *.log
 *.sqlite
 experiments/01-perception/level-1-python/output/
+figure/ChatGPT Image*.png
+
+# CMake generated files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
 
 # IDE
 .vscode/

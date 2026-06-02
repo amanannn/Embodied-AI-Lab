@@ -2,6 +2,8 @@
 
 ## 脚本列表
 
+脚本目录是“运行入口”，不是完整学习地图。学习顺序请先看上一级 [`README.md`](../README.md)，再回到这里执行对应脚本。
+
 | 脚本 | 用途 | 输出文件 |
 |------|------|---------|
 | `noise.py` | 四种噪声类型对比 | `output/noise_comparison.png` |
@@ -14,6 +16,8 @@
 | `all.py` | 四合一对比 | `output/all_filters_comparison.png` |
 | `kf_tuning.py` | 参数调优实验（五组对比） | `output/kf_tuning_comparison.png` |
 | `camera_calibration.py` | USB 摄像头棋盘格标定 | `output/camera_calibration.json`, `output/camera_calibration/` |
+| `aruco_pose.py` | ArUco / AprilTag 检测与 6DoF 位姿估计 | `output/aruco_pose/marker_*.png`, `output/aruco_pose/aruco_detection.*` |
+| `classic_vision.py` | 光流、特征匹配、背景减除基础视觉 | `output/classic_vision/*.jpg`, `output/classic_vision/sample_motion.mp4` |
 
 ## 运行方式
 
@@ -38,6 +42,15 @@ python scripts/kf.py --data path/to/preprocessed_position_data.csv
 # 视觉：相机标定
 python scripts/camera_calibration.py --generate-board
 python scripts/camera_calibration.py --input-dir calibration_images
+
+# 视觉：ArUco / AprilTag
+python scripts/aruco_pose.py --generate-marker
+python scripts/aruco_pose.py --input-image path/to/marker_photo.jpg
+
+# 视觉：经典 OpenCV
+python scripts/classic_vision.py --generate-sample --mode optical-flow
+python scripts/classic_vision.py --generate-sample --mode feature-matching
+python scripts/classic_vision.py --generate-sample --mode background-subtraction
 ```
 
 ## 输出文件说明
@@ -50,3 +63,5 @@ python scripts/camera_calibration.py --input-dir calibration_images
 - `all_filters_comparison.png` — 四种滤波器并排对比 + RMSE 柱状图
 - `camera_calibration.json` — 相机内参、畸变系数、重投影误差与有效图片清单
 - `camera_calibration/` — 角点检测预览与去畸变预览图
+- `aruco_pose/` — marker 图片、检测预览和位姿 JSON
+- `classic_vision/` — 光流、特征匹配、背景减除预览图和样例视频

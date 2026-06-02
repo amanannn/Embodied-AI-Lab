@@ -2,6 +2,8 @@
 
 中文： [README.md](./README.md)
 
+![Embodied AI Lab banner](./figure/embodied-ai-lab-banner.png)
+
 ### A direction-first, experiment-driven curriculum for embodied AI
 
 Embodied AI Lab is a public course repository for learners and builders who want to understand embodied intelligence through executable experiments rather than theory-only summaries.

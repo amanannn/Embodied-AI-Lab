@@ -2,6 +2,8 @@
 
 English: [README.en.md](./README.en.md)
 
+![Embodied AI Lab banner](./figure/embodied-ai-lab-banner.png)
+
 ### 面向具身智能的方向优先、实验驱动课程仓库
 
 Embodied AI Lab 是一个面向学习者和构建者的具身智能课程仓库。它以可运行实验为核心，把感知、导航、控制、学习、操作和系统集成组织成一套从直觉到工程逐步推进的课程地图。
