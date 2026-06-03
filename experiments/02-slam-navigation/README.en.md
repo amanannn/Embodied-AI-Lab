@@ -12,19 +12,21 @@ SLAM and navigation turn state estimation into a real mobile-robot loop: localiz
 
 ## Level Structure
 
-- `level-1-python`: MCL, EKF-SLAM, and path planning
+- `level-1-python`: Grid Search path planning, MCL, and EKF-SLAM
 - `level-2-cpp-or-mixed`: SLAM frontend and ROS2 navigation integration
 - `level-3-research`: semantic SLAM, dynamic-scene navigation, and larger-scale mapping
 
-## Representative Experiments
+## Representative Experiments (Candidates)
 
-- `s01-mcl-localization`
-- `s02-ekf-slam`
-- `s03-path-planning`
+The following are candidate experiments, not yet implemented:
+
+- `s01-grid-search` — A* and Dijkstra path planning (candidate)
+- `s02-mcl-localization` — Monte Carlo Localization (candidate)
+- `s03-ekf-slam` — Extended Kalman Filter SLAM (candidate)
 
 ## Suggested Entry Point
 
-After completing the Kalman baseline, start with MCL and then expand into EKF-SLAM and path planning.
+After completing the Kalman baseline, start with path planning, then expand into MCL localization and EKF-SLAM.
 
 ## Research Extensions
 

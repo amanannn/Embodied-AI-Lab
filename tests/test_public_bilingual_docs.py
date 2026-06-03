@@ -120,6 +120,8 @@ SHARED_README = ROOT / "shared/README.md"
 SHARED_README_EN = ROOT / "shared/README.en.md"
 MAP_README = ROOT / "docs/curriculum/legacy-to-direction-map.md"
 MAP_README_EN = ROOT / "docs/curriculum/legacy-to-direction-map.en.md"
+SLAM_LEVEL1_README = ROOT / "experiments/02-slam-navigation/level-1-python/README.md"
+SLAM_LEVEL1_README_EN = ROOT / "experiments/02-slam-navigation/level-1-python/README.en.md"
 
 
 class PublicBilingualDocsTest(unittest.TestCase):
@@ -173,6 +175,33 @@ class PublicBilingualDocsTest(unittest.TestCase):
         en = SLAM_README_EN.read_text(encoding="utf-8")
         self.assertIn("English: [README.en.md](./README.en.md)", zh)
         self.assertIn("中文： [README.md](./README.md)", en)
+
+    def test_slam_navigation_candidate_ids_are_consistent(self) -> None:
+        zh = SLAM_README.read_text(encoding="utf-8")
+        en = SLAM_README_EN.read_text(encoding="utf-8")
+        level1_zh = SLAM_LEVEL1_README.read_text(encoding="utf-8")
+        level1_en = SLAM_LEVEL1_README_EN.read_text(encoding="utf-8")
+        map_zh = MAP_README.read_text(encoding="utf-8")
+        map_en = MAP_README_EN.read_text(encoding="utf-8")
+
+        expected = [
+            "s01-grid-search",
+            "s02-mcl-localization",
+            "s03-ekf-slam",
+        ]
+        for doc in [zh, en, level1_zh, level1_en]:
+            for lab_id in expected:
+                with self.subTest(lab_id=lab_id):
+                    self.assertIn(lab_id, doc)
+
+        self.assertEqual(zh.count("s01-"), 1)
+        self.assertEqual(en.count("s01-"), 1)
+        self.assertIn("`07-path-planning` | `experiments/02-slam-navigation/` | `s01-grid-search`", map_zh)
+        self.assertIn("`02-particle-filter-mcl` | `experiments/02-slam-navigation/` | `s02-mcl-localization`", map_zh)
+        self.assertIn("`03-ekf-slam` | `experiments/02-slam-navigation/` | `s03-ekf-slam`", map_zh)
+        self.assertIn("`07-path-planning` | `experiments/02-slam-navigation/` | `s01-grid-search`", map_en)
+        self.assertIn("`02-particle-filter-mcl` | `experiments/02-slam-navigation/` | `s02-mcl-localization`", map_en)
+        self.assertIn("`03-ekf-slam` | `experiments/02-slam-navigation/` | `s03-ekf-slam`", map_en)
 
     def test_shared_and_map_have_language_links(self) -> None:
         zh = SHARED_README.read_text(encoding="utf-8")

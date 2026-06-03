@@ -37,7 +37,7 @@ The course is organized around 10 mainstream research directions. The panorama b
 | Direction | Core Question | Typical Level 1 Entry | Typical Level 2 Strengthening |
 |---|---|---|---|
 | Perception | How does a robot interpret the world? | Kalman-based state estimation | C++ Kalman and point cloud processing |
-| SLAM and Navigation | How does a robot know where it is and how to move? | MCL, EKF-SLAM, path planning | SLAM frontend and ROS2 navigation integration |
+| SLAM and Navigation | How does a robot know where it is and how to move? | Grid Search path planning, MCL, EKF-SLAM | SLAM frontend and ROS2 navigation integration |
 | Motion Control | How does a robot move accurately and robustly? | PID and trajectory optimization | Real-time control loops |
 | RL and Imitation | How does a robot learn behavior from reward or demonstration? | Q-learning, deep RL, imitation learning | deployment and policy interfaces |
 | World Models | Can a robot predict future dynamics and use them for decisions? | dynamics prediction and rollout | planner-coupled predictive models |
@@ -67,8 +67,8 @@ This section emphasizes the repository state of each direction: where it sits to
 
 | Direction | Role in This Repository | Current Entry |
 |---|---|---|
-| 01. Perception | Provides the first runnable state-estimation baseline. | Start at `experiments/01-perception/level-1-python`, which contains the full Kalman filter lab. |
-| 02. SLAM and Navigation | Extends estimation into localization, mapping, and planning loops. | Currently represented by direction pages and structure, with future MCL, EKF-SLAM, and planning work. |
+| 01. Perception | Provides the first complete runnable Level 1 baseline. | Start at `experiments/01-perception/level-1-python`, which contains sensor, filtering, and basic vision labs. |
+| 02. SLAM and Navigation | Extends estimation into localization, mapping, and planning loops. | Currently represented by candidate experiment pages; start with Grid Search path planning, then expand into MCL and EKF-SLAM. |
 | 03. Motion Control | Opens the path from sensing loops to action loops. | Currently represented by direction pages and structure for PID and trajectory work. |
 | 04. RL and Imitation | Adds policy learning once simulation anchors are mature. | Currently represented by direction pages and scaffold only. |
 | 05. World Models | Focuses on predictive modeling and stronger decision-making. | Currently a direction entry with future anchor experiments. |
@@ -114,15 +114,16 @@ This section emphasizes the repository state of each direction: where it sits to
 
 The repository is transitioning from a flat experiment list to a direction-first structure. At the moment:
 
-- the Kalman filter lab remains the strongest runnable baseline
+- Perception Level 1 now covers three complete experiment groups: sensor simulation, state estimation, and basic vision
 - most later directions still sit at the direction-page and scaffold stage
-- the direction-first structure exists, but full code migration has not happened yet
+- the direction-first structure exists, and code migration is gradually expanding
 
 | Area | Status |
 |---|---|
 | Direction-first information architecture | In progress |
 | Root homepage rewrite | Complete |
 | Direction landing pages | First batch complete |
+| Perception Level 1 vision track | Complete |
 | Shared module extraction | Planned |
 | World Models / VLN / LLM+Robot anchor experiments | Planned |
 
@@ -155,7 +156,7 @@ tests/
 
 ### Python path
 
-The perception direction contains two complete experiments: sensor fundamentals and Kalman filters.
+The perception direction contains three complete experiment groups: sensor fundamentals, Kalman filters, and basic vision.
 
 ```bash
 cd experiments/01-perception/level-1-python
@@ -173,6 +174,11 @@ python scripts/ukf.py          # Unscented Kalman Filter
 python scripts/pf.py           # Particle Filter
 python scripts/all.py          # Four-filter comparison
 python scripts/kf_tuning.py    # Parameter experiments
+
+# Experiment 3: Basic Vision
+python scripts/camera_calibration.py --generate-board   # Generate checkerboard
+python scripts/aruco_pose.py --generate-marker          # Generate ArUco marker
+python scripts/classic_vision.py --generate-sample --mode optical-flow  # Optical flow sample
 ```
 
 ### C++ or mixed path
