@@ -1,23 +1,26 @@
-# SLAM & Navigation — Level 3: Research Extensions
+# SLAM and Navigation — Level 3: Research Extension
 
 中文： [README.md](./README.md)
 
-> This directory is the planning scaffold for Level 3 research extensions. Content will be added later.
+## Positioning
 
-## Planned Structure
+This directory is the **research extension layer** for the SLAM and navigation direction. Level 3 connects course versions to research questions, papers, and deeper implementation paths — it does not promise vague "complete implementations" but clarifies research boundaries.
 
-```text
-level-3-research/
-├── papers/         # Key paper notes
-├── benchmarks/     # Evaluation benchmarks
-├── experiments/    # Reproduction experiments
-└── README.md       # Research overview
-```
+## Research Directions
 
-## Planned Content
+| Direction | Research Question | Prerequisites |
+|-----------|------------------|---------------|
+| Semantic SLAM | How to incorporate semantic information into SLAM map representations? | Level 1 + Level 2 SLAM foundations |
+| Dynamic Scene Navigation | How to navigate safely in environments with dynamic obstacles? | Level 1 path planning + Level 2 navigation integration |
+| Large-scale Map Building | How to build and maintain large-scale environment maps? | Level 2 SLAM frontend |
 
-- [ ] Key paper list and notes
-- [ ] Open-source implementations and comparisons
-- [ ] Metrics and benchmark references
-- [ ] Reproduction experiments
-- [ ] Bridges back to Level 1 and Level 2
+## Relationship to Level 1/2
+
+- Level 1 builds path planning and localization algorithm intuition
+- Level 2 connects these algorithms into ROS2 / C++ real systems
+- Level 3 explores more open research questions and extension boundaries
+
+## Related Documentation
+
+- [Python-first, ROS2-ready Path](../../../docs/curriculum/python-first-ros2-ready.en.md)
+- [SLAM and Navigation Direction Page](../README.en.md)

@@ -12,9 +12,9 @@ SLAM and navigation turn state estimation into a real mobile-robot loop: localiz
 
 ## Level Structure
 
-- `level-1-python`: Grid Search path planning, MCL, and EKF-SLAM
-- `level-2-cpp-or-mixed`: SLAM frontend and ROS2 navigation integration
-- `level-3-research`: semantic SLAM, dynamic-scene navigation, and larger-scale mapping
+- `level-1-python`: **Current main product**. Pure Python implementations with no ROS2 / Gazebo / Isaac / GPU dependencies, runnable on Manjaro or any standard Python environment. Covers Grid Search path planning, MCL, and EKF-SLAM.
+- `level-2-ros2-bridge`: **Engineering bridge layer**. Connects Level 1 localization and planning algorithms into ROS2 / C++ / real robot software stacks, targeting Ubuntu environments.
+- `level-3-research`: **Research extension layer**. Semantic SLAM, dynamic-scene navigation, and larger-scale mapping.
 
 ## Representative Experiments (Candidates)
 

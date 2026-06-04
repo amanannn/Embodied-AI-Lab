@@ -1,23 +1,26 @@
-# Sim-to-Real — Level 3: Research Extensions
+# Simulation and Sim-to-Real — Level 3: Research Extension
 
 中文： [README.md](./README.md)
 
-> This directory is the planning scaffold for Level 3 research extensions. Content will be added later.
+## Positioning
 
-## Planned Structure
+This directory is the **research extension layer** for the sim-to-real direction. Level 3 connects course versions to research questions, papers, and deeper implementation paths — it does not promise vague "complete implementations" but clarifies research boundaries.
 
-```text
-level-3-research/
-├── papers/         # Key paper notes
-├── benchmarks/     # Evaluation benchmarks
-├── experiments/    # Reproduction experiments
-└── README.md       # Research overview
-```
+## Research Directions
 
-## Planned Content
+| Direction | Research Question | Prerequisites |
+|-----------|------------------|---------------|
+| Domain Randomization | How to systematically randomize simulation parameters for better transfer? | Level 1 simulation foundations |
+| System Identification | How to identify simulation parameters from real-world data? | Level 1 + optimization foundations |
+| Simulator Fidelity | How to trade off between computational cost and fidelity? | Level 2 simulator bridge |
 
-- [ ] Key paper list and notes
-- [ ] Open-source implementations and comparisons
-- [ ] Metrics and benchmark references
-- [ ] Reproduction experiments
-- [ ] Bridges back to Level 1 and Level 2
+## Relationship to Level 1/2
+
+- Level 1 builds simulation foundations intuition
+- Level 2 connects simulation concepts into Gazebo / Isaac Sim and richer simulators
+- Level 3 explores more open research questions and extension boundaries
+
+## Related Documentation
+
+- [Python-first, ROS2-ready Path](../../../docs/curriculum/python-first-ros2-ready.en.md)
+- [Sim-to-Real Direction Page](../README.en.md)

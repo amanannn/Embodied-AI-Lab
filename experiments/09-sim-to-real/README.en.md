@@ -14,9 +14,9 @@ Phase 1 gives this direction immediate repository relevance because `04-robot-si
 
 ## Level Structure
 
-- `level-1-python`: simulator foundations and domain-randomization concepts
-- `level-2-cpp-or-mixed`: richer simulator bridges and migration-oriented engineering
-- `level-3-research`: transfer, identification, and digital-twin extensions
+- `level-1-python`: **Current main product**. Pure Python implementations with no ROS2 / Gazebo / Isaac / GPU dependencies, runnable on Manjaro or any standard Python environment. Covers simulator foundations and domain-randomization concepts.
+- `level-2-ros2-bridge`: **Engineering bridge layer**. Connects Level 1 simulation foundations into ROS2 / C++ / richer simulators, targeting Ubuntu environments.
+- `level-3-research`: **Research extension layer**. Transfer, identification, and digital-twin extensions.
 
 ## Representative Experiments
 

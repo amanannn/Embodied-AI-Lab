@@ -1,23 +1,26 @@
-# Vision-Language Navigation — Level 3: Research Extensions
+# Vision-Language Navigation — Level 3: Research Extension
 
 中文： [README.md](./README.md)
 
-> This directory is the planning scaffold for Level 3 research extensions. Content will be added later.
+## Positioning
 
-## Planned Structure
+This directory is the **research extension layer** for the VLN direction. Level 3 connects course versions to research questions, papers, and deeper implementation paths — it does not promise vague "complete implementations" but clarifies research boundaries.
 
-```text
-level-3-research/
-├── papers/         # Key paper notes
-├── benchmarks/     # Evaluation benchmarks
-├── experiments/    # Reproduction experiments
-└── README.md       # Research overview
-```
+## Research Directions
 
-## Planned Content
+| Direction | Research Question | Prerequisites |
+|-----------|------------------|---------------|
+| Long-horizon Instruction Following | How to execute multi-step long-term language instructions? | Level 1 language navigation + memory mechanisms |
+| Semantic Maps | How to build semantic maps that support language queries? | Level 1 + SLAM foundations |
+| Multimodal Memory | How to integrate visual, linguistic, and spatial memory? | Level 1 + deep learning foundations |
 
-- [ ] Key paper list and notes
-- [ ] Open-source implementations and comparisons
-- [ ] Metrics and benchmark references
-- [ ] Reproduction experiments
-- [ ] Bridges back to Level 1 and Level 2
+## Relationship to Level 1/2
+
+- Level 1 builds language navigation algorithm intuition
+- Level 2 connects navigation algorithms into ROS2 / C++ real systems
+- Level 3 explores more open research questions and extension boundaries
+
+## Related Documentation
+
+- [Python-first, ROS2-ready Path](../../../docs/curriculum/python-first-ros2-ready.en.md)
+- [VLN Direction Page](../README.en.md)

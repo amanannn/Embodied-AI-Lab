@@ -14,9 +14,9 @@ In this repository, Phase 1 establishes the direction landing page first and doe
 
 ## Level Structure
 
-- `level-1-python`: dynamics prediction and short-horizon rollout
-- `level-2-cpp-or-mixed`: planner-coupled predictive environments
-- `level-3-research`: latent world models and model-based RL
+- `level-1-python`: **Current main product**. Pure Python implementations with no ROS2 / Gazebo / Isaac / GPU dependencies, runnable on Manjaro or any standard Python environment. Covers dynamics prediction and short-horizon rollout.
+- `level-2-ros2-bridge`: **Engineering bridge layer**. Connects Level 1 predictive models into ROS2 / C++ / real robot software stacks, targeting Ubuntu environments.
+- `level-3-research`: **Research extension layer**. Latent world models and model-based RL.
 
 ## Representative Experiments
 

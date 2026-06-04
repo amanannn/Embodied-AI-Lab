@@ -14,9 +14,9 @@ Phase 1 给此方向带来直接的仓库关联：`04-robot-sim` 映射到此，
 
 ## Level Structure
 
-- `level-1-python`：仿真器基础与域随机化概念
-- `level-2-cpp-or-mixed`：更丰富的仿真器桥接与迁移导向的工程
-- `level-3-research`：迁移、辨识与数字孪生扩展
+- `level-1-python`：**当前主产品**。纯 Python 实现，无 ROS2 / Gazebo / Isaac / GPU 依赖，可在 Manjaro 或任意 Python 环境中直接运行。包含仿真器基础与域随机化概念。
+- `level-2-ros2-bridge`：**工程桥接层**。将 Level 1 的仿真基础接入 ROS2 / C++ / 更丰富的仿真器，面向 Ubuntu 开发环境。
+- `level-3-research`：**研究扩展层**。迁移、辨识与数字孪生扩展。
 
 ## Representative Experiments
 

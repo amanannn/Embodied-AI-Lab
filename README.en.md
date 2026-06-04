@@ -8,6 +8,8 @@
 
 Embodied AI Lab is a public course repository for learners and builders who want to understand embodied intelligence through executable experiments rather than theory-only summaries.
 
+This project follows a **Python-first, ROS2-ready** path: Level 1 builds algorithmic intuition with runnable Python labs, Level 2 bridges those outputs into ROS2/C++/mixed robotics systems, and Level 3 frames research extensions.
+
 The repository is currently organized around research directions first and experiments second: directions provide the top-level map, while experiments remain the real learning and implementation units.
 
 ## What This Repository Is
@@ -34,32 +36,33 @@ This repository takes a different path:
 
 The course is organized around 10 mainstream research directions. The panorama below answers three questions: what each direction studies, where students usually enter, and how that work later strengthens into more serious engineering.
 
-| Direction | Core Question | Typical Level 1 Entry | Typical Level 2 Strengthening |
+| Direction | Core Question | Typical Level 1 Entry | Typical Level 2 Bridge |
 |---|---|---|---|
-| Perception | How does a robot interpret the world? | Kalman-based state estimation | C++ Kalman and point cloud processing |
-| SLAM and Navigation | How does a robot know where it is and how to move? | Grid Search path planning, MCL, EKF-SLAM | SLAM frontend and ROS2 navigation integration |
-| Motion Control | How does a robot move accurately and robustly? | PID and trajectory optimization | Real-time control loops |
-| RL and Imitation | How does a robot learn behavior from reward or demonstration? | Q-learning, deep RL, imitation learning | deployment and policy interfaces |
-| World Models | Can a robot predict future dynamics and use them for decisions? | dynamics prediction and rollout | planner-coupled predictive models |
-| Vision-Language Navigation | Can a robot follow language to find semantic goals? | toy semantic search | richer semantic environment integration |
-| Manipulation | How does a robot interact with objects? | kinematics, dynamics, grasping | execution interfaces and manipulation stacks |
-| LLM and Robotics | How do large models help robots plan and act? | task decomposition and tool use | grounded execution interfaces |
-| Simulation and Sim-to-Real | How do we train in simulation and transfer to the real world? | lightweight simulation foundations | richer simulator bridges |
-| Vertical Applications | How do these capabilities land in real scenarios? | scenario-scoped exercises | integrated capstones |
+| Perception | How does a robot interpret the world? | Kalman-based state estimation | ROS2 perception topics, TF, odometry bridge |
+| SLAM and Navigation | How does a robot know where it is and how to move? | Grid Search path planning, MCL, EKF-SLAM | ROS2 map/path topics, RViz2, Nav2 concept bridge |
+| Motion Control | How does a robot move accurately and robustly? | PID and trajectory optimization | ROS2 control loop and trajectory messages |
+| RL and Imitation | How does a robot learn behavior from reward or demonstration? | Q-learning, deep RL, imitation learning | policy deployment bridge and action interface |
+| World Models | Can a robot predict future dynamics and use them for decisions? | dynamics prediction and rollout | prediction service / planner bridge |
+| Vision-Language Navigation | Can a robot follow language to find semantic goals? | toy semantic search | language goal to ROS2 navigation goal bridge |
+| Manipulation | How does a robot interact with objects? | kinematics, dynamics, grasping | MoveIt2 / trajectory / gripper interface bridge |
+| LLM and Robotics | How do large models help robots plan and act? | task decomposition and tool use | task planning to ROS2 services/actions bridge |
+| Simulation and Sim-to-Real | How do we train in simulation and transfer to the real world? | lightweight simulation foundations | Gazebo / Isaac / ROS2 simulation bridge |
+| Vertical Applications | How do these capabilities land in real scenarios? | scenario-scoped exercises | multi-module ROS2 integration bridge |
 
 ## Learning Architecture
 
 Each direction advances through three levels:
 
-- **Level 1: Python**  
-  Built for undergraduates and early learners, emphasizing from-scratch implementation, visualization, fast feedback, and intuition.
-- **Level 2: C++ or Mixed**  
-  Built for engineering strengthening, emphasizing performance, ROS2, geometry, systems constraints, and real-time behavior.
-- **Level 3: Research**  
-  Built for research extension, connecting course versions to theses, papers, and deeper implementation paths.
+- **Level 1: Core Python Lab**  
+  The current main product. Pure Python implementations with no ROS2 / Gazebo / Isaac / GPU dependencies, runnable on Manjaro or any standard Python environment. Built for undergraduates and early learners, emphasizing from-scratch implementation, visualization, fast feedback, and intuition.
+- **Level 2: ROS2 / C++ / Mixed Bridge**  
+  The engineering bridge layer. Connects Level 1 algorithmic intuition into ROS2 / C++ / real robot software stacks, targeting Ubuntu development environments. Emphasizes performance, ROS2 messages/nodes, geometric constraints, and real-time behavior.
+- **Level 3: Research Extension**  
+  The research layer. Connects course versions to theses, papers, and deeper implementation paths.
 
-Python is used to build intuition quickly.  
-C++ is used to move into stronger engineering implementations.
+Python builds intuition quickly.  
+ROS2 / C++ bridges into real robotic systems.  
+Research extensions explore boundaries and open questions.
 
 ## Research Directions
 
@@ -181,9 +184,11 @@ python scripts/aruco_pose.py --generate-marker          # Generate ArUco marker
 python scripts/classic_vision.py --generate-sample --mode optical-flow  # Optical flow sample
 ```
 
-### C++ or mixed path
+### ROS2 / C++ bridge path
 
-The current recommendation is to build intuition from the Python baseline first, then enter stronger C++ / Mixed bridge experiments through the direction pages.
+Level 2 bridges Level 1 Python algorithmic intuition into ROS2 / C++ / real robot software stacks. The current recommendation is to complete Level 1 first, then enter Level 2 engineering bridge experiments through the direction pages.
+
+> Device strategy: Level 1 runs on Manjaro or any standard Python environment; Level 2 targets Ubuntu with ROS2 and C++ toolchains.
 
 ## Roadmap
 
@@ -192,12 +197,13 @@ The current recommendation is to build intuition from the Python baseline first,
 - establish the direction-first structure
 - establish the bilingual public entry points
 - complete the first batch of direction and shared documentation
+- define the Python-first, ROS2-ready three-level positioning
 
 ### Phase 2
 
 - gradually move legacy experiment docs into the direction structure
 - extract reusable code into `shared/`
-- establish earlier Python-to-C++ bridges
+- establish Level 1 → Level 2 ROS2 / C++ bridge interfaces
 
 ### Phase 3
 

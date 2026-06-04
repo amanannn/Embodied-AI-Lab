@@ -14,9 +14,9 @@ English: [README.en.md](./README.en.md)
 
 ## Level Structure
 
-- `level-1-python`：动力学预测与短期展开
-- `level-2-cpp-or-mixed`：规划器耦合的预测环境
-- `level-3-research`：潜在世界模型与基于模型的强化学习
+- `level-1-python`：**当前主产品**。纯 Python 实现，无 ROS2 / Gazebo / Isaac / GPU 依赖，可在 Manjaro 或任意 Python 环境中直接运行。包含动力学预测与短期展开。
+- `level-2-ros2-bridge`：**工程桥接层**。将 Level 1 的预测模型接入 ROS2 / C++ / 真实机器人软件栈，面向 Ubuntu 开发环境。
+- `level-3-research`：**研究扩展层**。潜在世界模型与基于模型的强化学习。
 
 ## Representative Experiments
 

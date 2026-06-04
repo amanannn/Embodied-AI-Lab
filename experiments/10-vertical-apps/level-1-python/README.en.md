@@ -1,24 +1,22 @@
-# Vertical Applications — Level 1: Python Foundations
+# Vertical Applications — Level 1: Core Python Lab
 
 中文： [README.md](./README.md)
 
-> This directory is the planning scaffold for Level 1 Python experiments. Content will be added later.
+## Positioning
 
-## Planned Structure
+This directory is the **Level 1 entry** for the vertical applications direction. Level 1 is the current main product: pure Python implementations with no ROS2 / Gazebo / Isaac / GPU dependencies, runnable on Manjaro or any standard Python environment.
 
-```text
-level-1-python/
-├── scripts/        # Runnable Python scripts
-├── tutorials/      # Introductory tutorials
-├── filters/        # Core algorithm implementations
-├── utils/          # Utility helpers
-├── output/         # Runtime output (not tracked)
-└── requirements.txt
-```
+## Planned Experiments
 
-## Planned Content
+| Experiment | Core Question | Status |
+|-----------|---------------|--------|
+| Autonomous Inspection | How to integrate perception, navigation, and control into a scenario-driven system? | Planned |
 
-- [ ] Core algorithm implementation in Python
-- [ ] Introductory tutorials from intuition to code
-- [ ] Independently runnable demo scripts
-- [ ] Parameter tuning experiments
+## Relationship to Level 2
+
+Level 1 builds scenario-driven application intuition with Python. Level 2 (`../level-2-ros2-bridge/`) connects these exercises into ROS2 / C++ / real robot software stacks as integrated capstone projects.
+
+## Related Documentation
+
+- [Python-first, ROS2-ready Path](../../../docs/curriculum/python-first-ros2-ready.en.md)
+- [Vertical Applications Direction Page](../README.en.md)

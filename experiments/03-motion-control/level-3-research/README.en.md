@@ -1,23 +1,26 @@
-# Motion Control — Level 3: Research Extensions
+# Motion Control — Level 3: Research Extension
 
 中文： [README.md](./README.md)
 
-> This directory is the planning scaffold for Level 3 research extensions. Content will be added later.
+## Positioning
 
-## Planned Structure
+This directory is the **research extension layer** for the motion control direction. Level 3 connects course versions to research questions, papers, and deeper implementation paths — it does not promise vague "complete implementations" but clarifies research boundaries.
 
-```text
-level-3-research/
-├── papers/         # Key paper notes
-├── benchmarks/     # Evaluation benchmarks
-├── experiments/    # Reproduction experiments
-└── README.md       # Research overview
-```
+## Research Directions
 
-## Planned Content
+| Direction | Research Question | Prerequisites |
+|-----------|------------------|---------------|
+| Robust Control | How to maintain stable control under model uncertainty and external disturbances? | Level 1 PID + control theory foundations |
+| Model Predictive Control (MPC) | How to optimize multi-step control sequences under constraints? | Level 1 trajectory optimization + optimization foundations |
+| Force and Impedance Control | How to achieve safe interaction with the environment? | Level 2 real-time control interfaces |
 
-- [ ] Key paper list and notes
-- [ ] Open-source implementations and comparisons
-- [ ] Metrics and benchmark references
-- [ ] Reproduction experiments
-- [ ] Bridges back to Level 1 and Level 2
+## Relationship to Level 1/2
+
+- Level 1 builds PID and trajectory optimization algorithm intuition
+- Level 2 connects control algorithms into ROS2 / C++ real-time systems
+- Level 3 explores more open research questions and extension boundaries
+
+## Related Documentation
+
+- [Python-first, ROS2-ready Path](../../../docs/curriculum/python-first-ros2-ready.en.md)
+- [Motion Control Direction Page](../README.en.md)

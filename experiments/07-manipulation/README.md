@@ -12,9 +12,9 @@ English: [README.en.md](./README.en.md)
 
 ## Level Structure
 
-- `level-1-python`：运动学、机械臂动力学与抓取
-- `level-2-cpp-or-mixed`：执行接口与操作栈强化
-- `level-3-research`：灵巧操作、力引导操作与双臂协调
+- `level-1-python`：**当前主产品**。纯 Python 实现，无 ROS2 / Gazebo / Isaac / GPU 依赖，可在 Manjaro 或任意 Python 环境中直接运行。包含运动学、机械臂动力学与抓取。
+- `level-2-ros2-bridge`：**工程桥接层**。将 Level 1 的操作算法接入 ROS2 / C++ / 真实机器人软件栈，面向 Ubuntu 开发环境。
+- `level-3-research`：**研究扩展层**。灵巧操作、力引导操作与双臂协调。
 
 ## Representative Experiments
 

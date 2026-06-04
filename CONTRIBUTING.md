@@ -24,7 +24,7 @@ experiments/
 │   │   ├── tutorials/      # 教程
 │   │   ├── filters/        # 滤波器实现
 │   │   └── output/         # 运行输出（不跟踪）
-│   ├── level-2-cpp-or-mixed/  # Level 2: C++ 进阶
+│   ├── level-2-ros2-bridge/  # Level 2: ROS2 Bridge
 │   └── level-3-research/   # Level 3: 研究出口
 ├── 02-slam-navigation/
 │   ...

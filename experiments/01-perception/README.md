@@ -12,9 +12,9 @@ English: [README.en.md](./README.en.md)
 
 ## Level Structure
 
-- `level-1-python`：传感器仿真、噪声建模、状态估计、多传感器融合与基础视觉；学习路线见 [`level-1-python/README.md`](./level-1-python/README.md)
-- `level-2-cpp-or-mixed`：C++ Kalman 与点云处理强化
-- `level-3-research`：更丰富的融合、多模态感知与开放词汇方向
+- `level-1-python`：**当前主产品**。纯 Python 实现，无 ROS2 / Gazebo / Isaac / GPU 依赖，可在 Manjaro 或任意 Python 环境中直接运行。包含传感器仿真、噪声建模、状态估计、多传感器融合与基础视觉；学习路线见 [`level-1-python/README.md`](./level-1-python/README.md)
+- `level-2-ros2-bridge`：**工程桥接层**。将 Level 1 的感知算法接入 ROS2 / C++ / 真实机器人软件栈，面向 Ubuntu 开发环境。
+- `level-3-research`：**研究扩展层**。更丰富的融合、多模态感知与开放词汇方向。
 
 ## Level 1 Experiments
 

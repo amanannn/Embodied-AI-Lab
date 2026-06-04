@@ -12,9 +12,9 @@ English: [README.en.md](./README.en.md)
 
 ## Level Structure
 
-- `level-1-python`：Q-learning、深度强化学习与模仿学习
-- `level-2-cpp-or-mixed`：部署与策略接口强化
-- `level-3-research`：sim-to-real RL、离线 RL 与迁移扩展
+- `level-1-python`：**当前主产品**。纯 Python 实现，无 ROS2 / Gazebo / Isaac / GPU 依赖，可在 Manjaro 或任意 Python 环境中直接运行。包含 Q-learning、深度强化学习与模仿学习。
+- `level-2-ros2-bridge`：**工程桥接层**。将 Level 1 的策略学习算法接入 ROS2 / C++ / 真实机器人软件栈，面向 Ubuntu 开发环境。
+- `level-3-research`：**研究扩展层**。sim-to-real RL、离线 RL 与迁移扩展。
 
 ## Representative Experiments
 

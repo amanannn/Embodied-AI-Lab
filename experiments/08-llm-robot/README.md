@@ -14,9 +14,9 @@ English: [README.en.md](./README.en.md)
 
 ## Level Structure
 
-- `level-1-python`：任务分解与玩具世界工具使用
-- `level-2-cpp-or-mixed`：扎根的执行接口
-- `level-3-research`：长期、多模态与智能体机器人系统
+- `level-1-python`：**当前主产品**。纯 Python 实现，无 ROS2 / Gazebo / Isaac / GPU 依赖，可在 Manjaro 或任意 Python 环境中直接运行。包含任务分解与玩具世界工具使用。
+- `level-2-ros2-bridge`：**工程桥接层**。将 Level 1 的 LLM 规划算法接入 ROS2 / C++ / 真实机器人软件栈，面向 Ubuntu 开发环境。
+- `level-3-research`：**研究扩展层**。长期、多模态与智能体机器人系统。
 
 ## Representative Experiments
 

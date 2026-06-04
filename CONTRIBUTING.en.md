@@ -24,7 +24,7 @@ experiments/
 │   │   ├── tutorials/      # Tutorials
 │   │   ├── filters/        # Filter implementations
 │   │   └── output/         # Runtime output (not tracked)
-│   ├── level-2-cpp-or-mixed/  # Level 2: C++ advanced
+│   ├── level-2-ros2-bridge/  # Level 2: ROS2 bridge
 │   └── level-3-research/   # Level 3: Research exit
 ├── 02-slam-navigation/
 │   ...

@@ -14,9 +14,9 @@ English: [README.en.md](./README.en.md)
 
 ## Level Structure
 
-- `level-1-python`：语言目标解析与语义目标搜索
-- `level-2-cpp-or-mixed`：更丰富的环境与感知集成
-- `level-3-research`：长期 VLN 与基准导向的扩展
+- `level-1-python`：**当前主产品**。纯 Python 实现，无 ROS2 / Gazebo / Isaac / GPU 依赖，可在 Manjaro 或任意 Python 环境中直接运行。包含语言目标解析与语义目标搜索。
+- `level-2-ros2-bridge`：**工程桥接层**。将 Level 1 的语言导航算法接入 ROS2 / C++ / 真实机器人软件栈，面向 Ubuntu 开发环境。
+- `level-3-research`：**研究扩展层**。长期 VLN 与基准导向的扩展。
 
 ## Representative Experiments
 

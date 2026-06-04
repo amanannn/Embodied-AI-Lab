@@ -1,24 +1,22 @@
-# 垂直应用 (Vertical Applications) — Level 1: Python 入门
+# 垂直行业应用 (Vertical Applications) — Level 1: Core Python Lab
 
 English: [README.en.md](./README.en.md)
 
-> 本目录为 Level 1 Python 入门实验的规划目录，内容待补充。
+## 定位
 
-## 目录结构（规划）
+本目录是垂直行业应用方向的 **Level 1 入口**。Level 1 是当前主产品：纯 Python 实现，无 ROS2 / Gazebo / Isaac / GPU 依赖，可在 Manjaro 或任意 Python 环境中直接运行。
 
-```
-level-1-python/
-├── scripts/        # 可运行的 Python 脚本
-├── tutorials/      # 入门教程
-├── filters/        # 核心算法实现
-├── utils/          # 工具函数
-├── output/         # 运行输出（不跟踪）
-└── requirements.txt
-```
+## 规划中的实验
 
-## 待补充内容
+| 实验 | 核心问题 | 状态 |
+|------|---------|------|
+| 自主巡检 | 如何将感知、导航、控制整合为场景化系统？ | 规划中 |
 
-- [ ] 核心算法的 Python 实现
-- [ ] 入门教程（从直觉到代码）
-- [ ] 可独立运行的演示脚本
-- [ ] 参数调优实验
+## 与 Level 2 的关系
+
+Level 1 用 Python 建立场景化应用直觉。Level 2（`../level-2-ros2-bridge/`）将这些练习接入 ROS2 / C++ / 真实机器人软件栈，形成集成式顶石项目。
+
+## 相关文档
+
+- [Python-first, ROS2-ready 路线说明](../../../docs/curriculum/python-first-ros2-ready.md)
+- [垂直行业应用方向页](../README.md)

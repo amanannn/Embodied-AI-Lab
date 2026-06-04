@@ -12,9 +12,9 @@ Learning-based behavior becomes important when hand-designed control logic is to
 
 ## Level Structure
 
-- `level-1-python`: Q-learning, deep RL, and imitation learning
-- `level-2-cpp-or-mixed`: deployment and policy interface strengthening
-- `level-3-research`: sim-to-real RL, offline RL, and transfer extensions
+- `level-1-python`: **Current main product**. Pure Python implementations with no ROS2 / Gazebo / Isaac / GPU dependencies, runnable on Manjaro or any standard Python environment. Covers Q-learning, deep RL, and imitation learning.
+- `level-2-ros2-bridge`: **Engineering bridge layer**. Connects Level 1 policy learning algorithms into ROS2 / C++ / real robot software stacks, targeting Ubuntu environments.
+- `level-3-research`: **Research extension layer**. Sim-to-real RL, offline RL, and transfer extensions.
 
 ## Representative Experiments
 

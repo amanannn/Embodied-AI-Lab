@@ -71,6 +71,6 @@ Generated plots, CSV files, JSON files, and animations are saved to `output/` by
 ## Current Scope
 
 - This level focuses on low-barrier, runnable, observable experiments, not industrial performance.
-- C++ engineering reinforcement belongs in `../level-2-cpp-or-mixed/`.
+- C++ engineering reinforcement belongs in `../level-2-ros2-bridge/`.
 - Research extensions belong in `../level-3-research/`.
 - Current vision labs target ordinary USB cameras, not RGB-D, point clouds, or high-precision 3D reconstruction.

@@ -14,9 +14,9 @@ This repository's Phase 1 state matters here: the landing page comes first so fu
 
 ## Level Structure
 
-- `level-1-python`: task decomposition and toy-world tool use
-- `level-2-cpp-or-mixed`: grounded execution interfaces
-- `level-3-research`: long-horizon, multimodal, and agentic robotics systems
+- `level-1-python`: **Current main product**. Pure Python implementations with no ROS2 / Gazebo / Isaac / GPU dependencies, runnable on Manjaro or any standard Python environment. Covers task decomposition and toy-world tool use.
+- `level-2-ros2-bridge`: **Engineering bridge layer**. Connects Level 1 LLM planning algorithms into ROS2 / C++ / real robot software stacks, targeting Ubuntu environments.
+- `level-3-research`: **Research extension layer**. Long-horizon, multimodal, and agentic robotics systems.
 
 ## Representative Experiments
 

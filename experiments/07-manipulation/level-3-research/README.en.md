@@ -1,23 +1,26 @@
-# Manipulation — Level 3: Research Extensions
+# Manipulation — Level 3: Research Extension
 
 中文： [README.md](./README.md)
 
-> This directory is the planning scaffold for Level 3 research extensions. Content will be added later.
+## Positioning
 
-## Planned Structure
+This directory is the **research extension layer** for the manipulation direction. Level 3 connects course versions to research questions, papers, and deeper implementation paths — it does not promise vague "complete implementations" but clarifies research boundaries.
 
-```text
-level-3-research/
-├── papers/         # Key paper notes
-├── benchmarks/     # Evaluation benchmarks
-├── experiments/    # Reproduction experiments
-└── README.md       # Research overview
-```
+## Research Directions
 
-## Planned Content
+| Direction | Research Question | Prerequisites |
+|-----------|------------------|---------------|
+| Dexterous Manipulation | How to control dexterous hands for fine manipulation tasks? | Level 1 kinematics + Level 2 execution interfaces |
+| Force-guided Manipulation | How to use force feedback for adaptive manipulation? | Level 1 dynamics + Level 2 real-time control |
+| Bimanual Coordination | How to coordinate two manipulators for collaborative tasks? | Level 1 + Level 2 system integration |
 
-- [ ] Key paper list and notes
-- [ ] Open-source implementations and comparisons
-- [ ] Metrics and benchmark references
-- [ ] Reproduction experiments
-- [ ] Bridges back to Level 1 and Level 2
+## Relationship to Level 1/2
+
+- Level 1 builds manipulation algorithm intuition
+- Level 2 connects manipulation algorithms into ROS2 / C++ MoveIt framework
+- Level 3 explores more open research questions and extension boundaries
+
+## Related Documentation
+
+- [Python-first, ROS2-ready Path](../../../docs/curriculum/python-first-ros2-ready.en.md)
+- [Manipulation Direction Page](../README.en.md)
