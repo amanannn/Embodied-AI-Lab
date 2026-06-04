@@ -54,7 +54,7 @@ The course is organized around 10 mainstream research directions. The panorama b
 Each direction advances through three levels:
 
 - **Level 1: Core Python Lab**  
-  The current main product. Pure Python implementations with no ROS2 / Gazebo / Isaac / GPU dependencies, runnable on Manjaro or any standard Python environment. Built for undergraduates and early learners, emphasizing from-scratch implementation, visualization, fast feedback, and intuition.
+  The current main product. Pure Python implementations with no ROS2 / Gazebo / Isaac / GPU dependencies, runnable in a Python 3.10+ runtime environment. Built for undergraduates and early learners, emphasizing from-scratch implementation, visualization, fast feedback, and intuition.
 - **Level 2: ROS2 / C++ / Mixed Bridge**  
   The engineering bridge layer. Connects Level 1 algorithmic intuition into ROS2 / C++ / real robot software stacks, targeting Ubuntu development environments. Emphasizes performance, ROS2 messages/nodes, geometric constraints, and real-time behavior.
 - **Level 3: Research Extension**  
@@ -78,7 +78,7 @@ This section emphasizes the repository state of each direction: where it sits to
 | 06. Vision-Language Navigation | Connects language, semantics, and navigation. | Currently a direction entry with future semantic search and VLN work. |
 | 07. Manipulation | Shifts from navigation to object interaction and manipulation. | Currently a direction entry for future kinematics, dynamics, and grasping work. |
 | 08. LLM and Robotics | Explores large models as planning and tool-use layers. | Currently a direction entry with future task planning agent work. |
-| 09. Simulation and Sim-to-Real | Provides training and transfer foundations. | Currently the direction most closely tied to future migration from `04-robot-sim`. |
+| 09. Simulation and Sim-to-Real | Provides training and transfer foundations. | Currently the direction most closely tied to future migration from `archive/legacy-experiments/04-robot-sim`. |
 | 10. Vertical Applications | Packages cross-direction skills into scenario-driven systems. | Currently a direction entry and capstone planning surface. |
 
 ## Recommended Learning Paths
@@ -132,12 +132,12 @@ The repository is transitioning from a flat experiment list to a direction-first
 
 ## Example Outputs
 
-Stable showcase figures, animations, and comparison outputs will be added here over time. The first expected candidates include:
+The figures below are representative Level 1 outputs that have already been generated and promoted into `figure/` as public showcase assets. Runtime outputs still live under each lab's `output/` directory; the homepage only references curated public assets.
 
-- Kalman filter comparison plots
-- planning visualizations
-- control tracking curves
-- manipulation scene renderings
+| Perception: Vision Loop | Navigation: A* Maze Path Planning | Navigation: Dijkstra Search Expansion |
+|---|---|---|
+| ![Perception vision loop showcase](./figure/showcase/perception-vision-panel.jpg) | ![A* maze path planning showcase](./figure/showcase/navigation-astar-maze.png) | ![Dijkstra maze path planning showcase](./figure/showcase/navigation-dijkstra-maze.png) |
+| Combines marker pose estimation, optical flow, and foreground segmentation into one runnable vision panel. | Shows heuristic-search expansion and the final shortest path on a known occupancy grid. | Uses the same map and shortest path as A*, but expands a wider region, making the value of heuristic search visible. |
 
 ## Repository Structure
 
@@ -148,12 +148,14 @@ shared/
 experiments/
 docs/
 tests/
+archive/
 ```
 
 - `shared/` contains reusable cross-direction infrastructure and public documentation
 - `experiments/` contains direction pages and experiment content
 - `docs/` contains public curriculum-facing documentation
 - `tests/` contains regression checks that matter to the public repository
+- `archive/` stores legacy experiments and is not the current learning entry point
 
 ## Quick Start
 
@@ -184,11 +186,22 @@ python scripts/aruco_pose.py --generate-marker          # Generate ArUco marker
 python scripts/classic_vision.py --generate-sample --mode optical-flow  # Optical flow sample
 ```
 
+The SLAM and navigation direction now provides its first Level 1 path-planning lab.
+
+```bash
+cd experiments/02-slam-navigation/level-1-python
+pip install -r requirements.txt
+
+# Experiment 1: Known-map path planning
+python scripts/grid_search.py --map maze --algorithm astar
+python scripts/grid_search.py --map maze --compare
+```
+
 ### ROS2 / C++ bridge path
 
 Level 2 bridges Level 1 Python algorithmic intuition into ROS2 / C++ / real robot software stacks. The current recommendation is to complete Level 1 first, then enter Level 2 engineering bridge experiments through the direction pages.
 
-> Device strategy: Level 1 runs on Manjaro or any standard Python environment; Level 2 targets Ubuntu with ROS2 and C++ toolchains.
+> Device strategy: Level 1 targets a Python 3.10+ runtime environment, uses each lab requirements.txt as the dependency source of truth, and can be managed with venv or Conda; Level 2 targets Ubuntu with ROS2 and C++ toolchains.
 
 ## Roadmap
 

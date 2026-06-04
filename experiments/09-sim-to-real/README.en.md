@@ -10,18 +10,18 @@ How do we build training environments in simulation and reduce the gap to real e
 
 Simulation is where experimentation becomes scalable, but transfer quality determines whether that work matters outside the simulator.
 
-Phase 1 gives this direction immediate repository relevance because `04-robot-sim` maps here and future reusable simulator pieces are expected to move into `shared/sim2d` instead of staying buried in one experiment.
+Phase 1 gives this direction immediate repository relevance because `archive/legacy-experiments/04-robot-sim` maps here and future reusable simulator pieces are expected to move into `shared/sim2d` instead of staying buried in one experiment.
 
 ## Level Structure
 
-- `level-1-python`: **Current main product**. Pure Python implementations with no ROS2 / Gazebo / Isaac / GPU dependencies, runnable on Manjaro or any standard Python environment. Covers simulator foundations and domain-randomization concepts.
+- `level-1-python`: **Current main product**. Pure Python implementations with no ROS2 / Gazebo / Isaac / GPU dependencies, runnable in a Python 3.10+ runtime environment. Covers simulator foundations and domain-randomization concepts.
 - `level-2-ros2-bridge`: **Engineering bridge layer**. Connects Level 1 simulation foundations into ROS2 / C++ / richer simulators, targeting Ubuntu environments.
 - `level-3-research`: **Research extension layer**. Transfer, identification, and digital-twin extensions.
 
 ## Representative Experiments
 
 - `r01-sim2d-foundation`
-- future migration bridges from `04-robot-sim` into direction-local labs and `shared/sim2d`
+- future migration bridges from `archive/legacy-experiments/04-robot-sim` into direction-local labs and `shared/sim2d`
 
 ## Suggested Entry Point
 

@@ -11,7 +11,7 @@ English: [README.en.md](./README.en.md)
 | | Level 1 (Python) | Level 2 (ROS2/C++) |
 |---|---|---|
 | 目标 | 建立算法直觉 | 桥接真实系统 |
-| 环境 | Manjaro / 任意 Python | Ubuntu + ROS2 |
+| 环境 | Python 3.10+ 运行环境 | Ubuntu + ROS2 |
 | 依赖 | Python 3.10+, pip | ROS2, CMake, C++ 编译工具链 |
 | 输出 | CSV / numpy 数组 | ROS2 消息 / 话题 |
 

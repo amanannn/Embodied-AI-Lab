@@ -4,7 +4,7 @@
 
 ## Positioning
 
-This directory is the **Level 1 entry** for the sim-to-real direction. Level 1 is the current main product: pure Python implementations with no ROS2 / Gazebo / Isaac / GPU dependencies, runnable on Manjaro or any standard Python environment.
+This directory is the **Level 1 entry** for the sim-to-real direction. Level 1 is the current main product: pure Python implementations with no ROS2 / Gazebo / Isaac / GPU dependencies, runnable in a Python 3.10+ runtime environment.
 
 ## Planned Experiments
 

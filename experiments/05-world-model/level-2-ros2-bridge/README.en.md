@@ -11,7 +11,7 @@ This directory is the **engineering bridge layer** for the world models directio
 | | Level 1 (Python) | Level 2 (ROS2/C++) |
 |---|---|---|
 | Goal | Build algorithmic intuition | Bridge into real systems |
-| Environment | Manjaro / any Python | Ubuntu + ROS2 |
+| Environment | Python 3.10+ runtime environment | Ubuntu + ROS2 |
 | Dependencies | Python 3.10+, pip | ROS2, CMake, C++ toolchain |
 | Output | CSV / numpy arrays | ROS2 messages / topics |
 

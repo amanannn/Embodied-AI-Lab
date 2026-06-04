@@ -14,7 +14,7 @@ In the current repository, this direction is intentionally ahead of the code mig
 
 ## Level Structure
 
-- `level-1-python`: **Current main product**. Pure Python implementations with no ROS2 / Gazebo / Isaac / GPU dependencies, runnable on Manjaro or any standard Python environment. Covers language goal parsing and semantic goal search.
+- `level-1-python`: **Current main product**. Pure Python implementations with no ROS2 / Gazebo / Isaac / GPU dependencies, runnable in a Python 3.10+ runtime environment. Covers language goal parsing and semantic goal search.
 - `level-2-ros2-bridge`: **Engineering bridge layer**. Connects Level 1 language navigation algorithms into ROS2 / C++ / real robot software stacks, targeting Ubuntu environments.
 - `level-3-research`: **Research extension layer**. Long-horizon VLN and benchmark-oriented extensions.
 

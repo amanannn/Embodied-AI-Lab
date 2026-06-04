@@ -19,7 +19,7 @@ English: [python-first-ros2-ready.en.md](./python-first-ros2-ready.en.md)
 Level 1 是当前主产品。
 
 - 纯 Python 实现，无 ROS2 / Gazebo / Isaac / GPU 依赖
-- 可在 Manjaro 或任何标准 Python 环境中直接运行
+- 可在 Python 3.10+ 运行环境中直接运行
 - 目标是让本科生和入门学习者在 30 分钟内跑通第一个实验
 - 强调从零实现、可视化、快速反馈和直觉建立
 
@@ -48,7 +48,7 @@ Level 3 是研究扩展层。
 
 | 层级 | 开发环境 | 依赖 |
 |------|---------|------|
-| Level 1 | Manjaro 或任意 Python 环境 | Python 3.10+，并以具体实验的 requirements.txt 为准 |
+| Level 1 | Python 3.10+ 运行环境 | 以具体实验的 requirements.txt 为准；可使用 venv 或 Conda 管理依赖 |
 | Level 2 | Ubuntu | ROS2, C++ 编译工具链, CMake |
 | Level 3 | 视研究方向而定 | 视具体课题而定 |
 
@@ -61,4 +61,4 @@ Level 3 是研究扩展层。
 
 ## 与旧结构的关系
 
-旧实验目录（如 `02-particle-filter-mcl`、`07-path-planning`）正在逐步迁移到方向优先结构。在迁移完成前，旧目录仍然可搜索、可理解。映射关系见 `docs/curriculum/legacy-to-direction-map.md`。
+旧实验已归档到 `archive/legacy-experiments/`，并正在逐步迁移到方向优先结构。归档目录用于保留历史参考和迁移来源；当前学习入口统一从 `experiments/` 开始。映射关系见 `docs/curriculum/legacy-to-direction-map.md`。

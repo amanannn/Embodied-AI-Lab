@@ -12,21 +12,21 @@ SLAM 与导航把状态估计扩展成真正的移动机器人闭环：定位、
 
 ## Level Structure
 
-- `level-1-python`：**当前主产品**。纯 Python 实现，无 ROS2 / Gazebo / Isaac / GPU 依赖，可在 Manjaro 或任意 Python 环境中直接运行。包含 Grid Search 路径规划、MCL 与 EKF-SLAM。
+- `level-1-python`：**当前主产品**。纯 Python 实现，无 ROS2 / Gazebo / Isaac / GPU 依赖，可在 Python 3.10+ 运行环境中直接运行。包含 Grid Search 路径规划、MCL 与 EKF-SLAM。
 - `level-2-ros2-bridge`：**工程桥接层**。将 Level 1 的定位与规划算法接入 ROS2 / C++ / 真实机器人软件栈，面向 Ubuntu 开发环境。
 - `level-3-research`：**研究扩展层**。语义 SLAM、动态场景导航与更大规模地图。
 
-## Representative Experiments（候选）
+## Representative Experiments
 
-以下为候选实验，尚未实现：
+当前已落地第一个路径规划实验，后续定位与 SLAM 实验仍为候选：
 
-- `s01-grid-search` — A* 与 Dijkstra 路径规划（候选）
+- `s01-grid-search` — A* 与 Dijkstra 路径规划（已完成）
 - `s02-mcl-localization` — 蒙特卡洛定位（候选）
 - `s03-ekf-slam` — 扩展卡尔曼 SLAM（候选）
 
 ## Suggested Entry Point
 
-建议在完成卡尔曼滤波基线后，先进入路径规划，再扩展到 MCL 定位与 EKF-SLAM。
+建议在完成卡尔曼滤波基线后，先进入 [`level-1-python`](level-1-python/README.md) 中的 Grid Search 路径规划，再扩展到 MCL 定位与 EKF-SLAM。
 
 ## Research Extensions
 

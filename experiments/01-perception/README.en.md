@@ -12,7 +12,7 @@ Perception is the input layer for estimation, planning, and control. Without a r
 
 ## Level Structure
 
-- `level-1-python`: **Current main product**. Pure Python implementations with no ROS2 / Gazebo / Isaac / GPU dependencies, runnable on Manjaro or any standard Python environment. Covers sensor simulation, noise modeling, state estimation, multi-sensor fusion, and basic vision; route entrance: [`level-1-python/README.en.md`](./level-1-python/README.en.md)
+- `level-1-python`: **Current main product**. Pure Python implementations with no ROS2 / Gazebo / Isaac / GPU dependencies, runnable in a Python 3.10+ runtime environment. Covers sensor simulation, noise modeling, state estimation, multi-sensor fusion, and basic vision; route entrance: [`level-1-python/README.en.md`](./level-1-python/README.en.md)
 - `level-2-ros2-bridge`: **Engineering bridge layer**. Connects Level 1 perception algorithms into ROS2 / C++ / real robot software stacks, targeting Ubuntu environments.
 - `level-3-research`: **Research extension layer**. Richer fusion, multimodal perception, and open-vocabulary directions.
 

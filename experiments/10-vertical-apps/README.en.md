@@ -12,7 +12,7 @@ Application directions force the curriculum to integrate perception, planning, c
 
 ## Level Structure
 
-- `level-1-python`: **Current main product**. Pure Python implementations with no ROS2 / Gazebo / Isaac / GPU dependencies, runnable on Manjaro or any standard Python environment. Covers scenario-scoped application exercises.
+- `level-1-python`: **Current main product**. Pure Python implementations with no ROS2 / Gazebo / Isaac / GPU dependencies, runnable in a Python 3.10+ runtime environment. Covers scenario-scoped application exercises.
 - `level-2-ros2-bridge`: **Engineering bridge layer**. Connects Level 1 application exercises into ROS2 / C++ / real robot software stacks, targeting Ubuntu environments.
 - `level-3-research`: **Research extension layer**. Domain-specific system design extensions.
 

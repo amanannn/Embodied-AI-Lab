@@ -4,7 +4,7 @@ English: [README.en.md](./README.en.md)
 
 ## 定位
 
-本目录是仿真与 Sim-to-Real 方向的 **Level 1 入口**。Level 1 是当前主产品：纯 Python 实现，无 ROS2 / Gazebo / Isaac / GPU 依赖，可在 Manjaro 或任意 Python 环境中直接运行。
+本目录是仿真与 Sim-to-Real 方向的 **Level 1 入口**。Level 1 是当前主产品：纯 Python 实现，无 ROS2 / Gazebo / Isaac / GPU 依赖，可在 Python 3.10+ 运行环境中直接运行。
 
 ## 规划中的实验
 

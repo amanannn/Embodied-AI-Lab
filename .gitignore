@@ -32,6 +32,7 @@ ENV/
 *.log
 *.sqlite
 experiments/01-perception/level-1-python/output/
+experiments/02-slam-navigation/level-1-python/output/
 figure/ChatGPT Image*.png
 
 # CMake generated files

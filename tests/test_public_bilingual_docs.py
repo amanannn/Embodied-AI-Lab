@@ -10,6 +10,10 @@ PUBLIC_DOCS = [
     "README.en.md",
     "CONTRIBUTING.md",
     "CONTRIBUTING.en.md",
+    "archive/README.md",
+    "archive/README.en.md",
+    "archive/legacy-experiments/README.md",
+    "archive/legacy-experiments/README.en.md",
     "experiments/01-perception/README.md",
     "experiments/01-perception/README.en.md",
     "experiments/02-slam-navigation/README.md",
@@ -34,6 +38,8 @@ PUBLIC_DOCS = [
     "experiments/01-perception/level-2-ros2-bridge/README.en.md",
     "experiments/02-slam-navigation/level-1-python/README.md",
     "experiments/02-slam-navigation/level-1-python/README.en.md",
+    "experiments/02-slam-navigation/level-1-python/tutorials/grid_search.md",
+    "experiments/02-slam-navigation/level-1-python/tutorials/grid_search.en.md",
     "experiments/02-slam-navigation/level-2-ros2-bridge/README.md",
     "experiments/02-slam-navigation/level-2-ros2-bridge/README.en.md",
     "experiments/02-slam-navigation/level-3-research/README.md",
@@ -114,6 +120,8 @@ PYTHON_FIRST_ROS2_READY = ROOT / "docs/curriculum/python-first-ros2-ready.md"
 PYTHON_FIRST_ROS2_READY_EN = ROOT / "docs/curriculum/python-first-ros2-ready.en.md"
 CURRICULUM_README = ROOT / "docs/curriculum/README.md"
 CURRICULUM_README_EN = ROOT / "docs/curriculum/README.en.md"
+EXPERIMENTS_DIR = ROOT / "experiments"
+LEGACY_ARCHIVE_DIR = ROOT / "archive/legacy-experiments"
 
 PRIVATE_FILES = [
     "AGENTS.md",
@@ -129,6 +137,11 @@ ROOT_README_EN = ROOT / "README.en.md"
 CONTRIBUTING = ROOT / "CONTRIBUTING.md"
 CONTRIBUTING_EN = ROOT / "CONTRIBUTING.en.md"
 BANNER_IMAGE = ROOT / "figure/embodied-ai-lab-banner.png"
+SHOWCASE_ASSETS = [
+    "figure/showcase/perception-vision-panel.jpg",
+    "figure/showcase/navigation-astar-maze.png",
+    "figure/showcase/navigation-dijkstra-maze.png",
+]
 PERCEPTION_README = ROOT / "experiments/01-perception/README.md"
 PERCEPTION_README_EN = ROOT / "experiments/01-perception/README.en.md"
 SLAM_README = ROOT / "experiments/02-slam-navigation/README.md"
@@ -182,6 +195,50 @@ class PublicBilingualDocsTest(unittest.TestCase):
         self.assertIn(banner, zh)
         self.assertIn(banner, en)
 
+    def test_root_homepage_uses_public_showcase_assets(self) -> None:
+        zh = ROOT_README.read_text(encoding="utf-8")
+        en = ROOT_README_EN.read_text(encoding="utf-8")
+
+        for asset in SHOWCASE_ASSETS:
+            with self.subTest(asset=asset):
+                self.assertTrue((ROOT / asset).is_file(), f"Missing showcase asset: {asset}")
+                self.assertIn(f"./{asset}", zh)
+                self.assertIn(f"./{asset}", en)
+
+        self.assertNotIn("level-1-python/output/", zh)
+        self.assertNotIn("level-1-python/output/", en)
+        self.assertNotIn("perception-aruco-pose.jpg", zh)
+        self.assertNotIn("perception-aruco-pose.jpg", en)
+
+    def test_root_homepage_orders_showcase_outputs_by_learning_flow(self) -> None:
+        zh = ROOT_README.read_text(encoding="utf-8")
+        en = ROOT_README_EN.read_text(encoding="utf-8")
+
+        self.assertLess(zh.index("感知：视觉闭环"), zh.index("导航：A* 迷宫路径规划"))
+        self.assertLess(zh.index("导航：A* 迷宫路径规划"), zh.index("导航：Dijkstra 搜索展开"))
+        self.assertLess(
+            zh.index("./figure/showcase/perception-vision-panel.jpg"),
+            zh.index("./figure/showcase/navigation-astar-maze.png"),
+        )
+        self.assertLess(
+            zh.index("./figure/showcase/navigation-astar-maze.png"),
+            zh.index("./figure/showcase/navigation-dijkstra-maze.png"),
+        )
+
+        self.assertLess(en.index("Perception: Vision Loop"), en.index("Navigation: A* Maze Path Planning"))
+        self.assertLess(
+            en.index("Navigation: A* Maze Path Planning"),
+            en.index("Navigation: Dijkstra Search Expansion"),
+        )
+        self.assertLess(
+            en.index("./figure/showcase/perception-vision-panel.jpg"),
+            en.index("./figure/showcase/navigation-astar-maze.png"),
+        )
+        self.assertLess(
+            en.index("./figure/showcase/navigation-astar-maze.png"),
+            en.index("./figure/showcase/navigation-dijkstra-maze.png"),
+        )
+
     def test_direction_pages_have_language_links(self) -> None:
         zh = PERCEPTION_README.read_text(encoding="utf-8")
         en = PERCEPTION_README_EN.read_text(encoding="utf-8")
@@ -213,12 +270,26 @@ class PublicBilingualDocsTest(unittest.TestCase):
 
         self.assertEqual(zh.count("s01-"), 1)
         self.assertEqual(en.count("s01-"), 1)
-        self.assertIn("`07-path-planning` | `experiments/02-slam-navigation/` | `s01-grid-search`", map_zh)
-        self.assertIn("`02-particle-filter-mcl` | `experiments/02-slam-navigation/` | `s02-mcl-localization`", map_zh)
-        self.assertIn("`03-ekf-slam` | `experiments/02-slam-navigation/` | `s03-ekf-slam`", map_zh)
-        self.assertIn("`07-path-planning` | `experiments/02-slam-navigation/` | `s01-grid-search`", map_en)
-        self.assertIn("`02-particle-filter-mcl` | `experiments/02-slam-navigation/` | `s02-mcl-localization`", map_en)
-        self.assertIn("`03-ekf-slam` | `experiments/02-slam-navigation/` | `s03-ekf-slam`", map_en)
+        self.assertIn("`archive/legacy-experiments/07-path-planning` | `experiments/02-slam-navigation/level-1-python/` | `s01-grid-search` (已迁移)", map_zh)
+        self.assertIn("`archive/legacy-experiments/02-particle-filter-mcl` | `experiments/02-slam-navigation/` | `s02-mcl-localization`", map_zh)
+        self.assertIn("`archive/legacy-experiments/03-ekf-slam` | `experiments/02-slam-navigation/` | `s03-ekf-slam`", map_zh)
+        self.assertIn("`archive/legacy-experiments/07-path-planning` | `experiments/02-slam-navigation/level-1-python/` | `s01-grid-search` (migrated)", map_en)
+        self.assertIn("`archive/legacy-experiments/02-particle-filter-mcl` | `experiments/02-slam-navigation/` | `s02-mcl-localization`", map_en)
+        self.assertIn("`archive/legacy-experiments/03-ekf-slam` | `experiments/02-slam-navigation/` | `s03-ekf-slam`", map_en)
+
+    def test_legacy_archive_map_paths_exist(self) -> None:
+        """映射表中声明的归档路径必须真实存在，不能指向不存在的旧目录。"""
+        for map_path in [MAP_README, MAP_README_EN]:
+            with self.subTest(map_path=map_path.name):
+                content = map_path.read_text(encoding="utf-8")
+                missing = []
+                for line in content.splitlines():
+                    if not line.startswith("| `archive/legacy-experiments/"):
+                        continue
+                    archive_path = line.split("`", maxsplit=2)[1]
+                    if not (ROOT / archive_path).exists():
+                        missing.append(archive_path)
+                self.assertEqual(missing, [])
 
     def test_shared_and_map_have_language_links(self) -> None:
         zh = SHARED_README.read_text(encoding="utf-8")
@@ -323,6 +394,20 @@ class PublicBilingualDocsTest(unittest.TestCase):
         self.assertIn("English: [README.en.md]", zh)
         self.assertIn("中文： [README.md]", en)
 
+    def test_archive_pages_have_language_links(self) -> None:
+        """archive/ 归档页必须有双向语言链接。"""
+        archive_pairs = [
+            ROOT / "archive/README.md",
+            ROOT / "archive/legacy-experiments/README.md",
+        ]
+        for zh_path in archive_pairs:
+            en_path = zh_path.with_name("README.en.md")
+            with self.subTest(path=zh_path):
+                zh = zh_path.read_text(encoding="utf-8")
+                en = en_path.read_text(encoding="utf-8")
+                self.assertIn("English: [README.en.md](./README.en.md)", zh)
+                self.assertIn("中文： [README.md](./README.md)", en)
+
     def test_level2_readmes_are_engineering_bridge(self) -> None:
         """Level 2 README 必须包含 Engineering Bridge 语义。"""
         directions = [
@@ -398,6 +483,24 @@ class PublicBilingualDocsTest(unittest.TestCase):
                 self.assertIn("当前主产品", zh, f"{d} zh missing '当前主产品'")
                 self.assertIn("Current main product", en, f"{d} en missing 'Current main product'")
 
+    def test_experiments_top_level_contains_only_direction_directories(self) -> None:
+        """experiments/ 顶层只保留 10 个新方向，旧实验必须归档。"""
+        expected = [
+            "01-perception",
+            "02-slam-navigation",
+            "03-motion-control",
+            "04-rl-imitation",
+            "05-world-model",
+            "06-vision-language-navigation",
+            "07-manipulation",
+            "08-llm-robot",
+            "09-sim-to-real",
+            "10-vertical-apps",
+        ]
+        actual = sorted(path.name for path in EXPERIMENTS_DIR.iterdir() if path.is_dir())
+        self.assertEqual(actual, expected)
+        self.assertTrue(LEGACY_ARCHIVE_DIR.is_dir())
+
     def test_no_public_doc_references_old_level2_path(self) -> None:
         """公开文档中不应再出现旧的 level-2-cpp-or-mixed 路径。"""
         forbidden = "level-2-cpp-or-mixed"
@@ -466,6 +569,23 @@ class PublicBilingualDocsTest(unittest.TestCase):
             with self.subTest(file=f"{d}/level-2-ros2-bridge/README.md"):
                 text = fpath.read_text(encoding="utf-8")
                 self.assertNotIn(forbidden, text, f"{d}/level-2-ros2-bridge/README.md contains '{forbidden}'")
+
+    def test_public_docs_do_not_expose_local_distro_or_conflate_python_and_conda(self) -> None:
+        """公开文档不应暴露作者本地发行版，也不应把 Python 与 Conda 并列成同类概念。"""
+        forbidden_patterns = [
+            "Manjaro",
+            "Python / Conda",
+            "standard Python / Conda",
+            "标准 Python / Conda",
+        ]
+        docs_to_check = [ROOT / path for path in PUBLIC_DOCS]
+        docs_to_check.extend([PYTHON_FIRST_ROS2_READY, PYTHON_FIRST_ROS2_READY_EN])
+
+        for fpath in sorted(set(docs_to_check)):
+            with self.subTest(file=fpath.relative_to(ROOT).as_posix()):
+                text = fpath.read_text(encoding="utf-8")
+                for pattern in forbidden_patterns:
+                    self.assertNotIn(pattern, text)
 
 
 if __name__ == "__main__":

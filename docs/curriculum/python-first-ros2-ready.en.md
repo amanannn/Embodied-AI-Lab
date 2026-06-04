@@ -19,7 +19,7 @@ This is not a simplified "write Python first, then C++" story. It is an intentio
 Level 1 is the current main product.
 
 - Pure Python implementations with no ROS2 / Gazebo / Isaac / GPU dependencies
-- Runnable on Manjaro or any standard Python environment
+- Runnable in a Python 3.10+ runtime environment
 - Goal: let undergraduates and early learners run their first experiment within 30 minutes
 - Emphasizes from-scratch implementation, visualization, fast feedback, and intuition
 
@@ -48,7 +48,7 @@ Level 3 is the research layer.
 
 | Layer | Environment | Dependencies |
 |-------|------------|--------------|
-| Level 1 | Manjaro or any Python environment | Python 3.10+, with each lab's requirements.txt as the source of truth |
+| Level 1 | Python 3.10+ runtime environment | Each lab requirements.txt is the source of truth; venv or Conda can manage dependencies |
 | Level 2 | Ubuntu | ROS2, C++ build toolchains, CMake |
 | Level 3 | Depends on research direction | Depends on specific topic |
 
@@ -61,4 +61,4 @@ Level 3 is the research layer.
 
 ## Relationship to Legacy Structure
 
-Legacy experiment directories (e.g., `02-particle-filter-mcl`, `07-path-planning`) are gradually migrating to the direction-first structure. Until migration is complete, legacy directories remain searchable and understandable. See `docs/curriculum/legacy-to-direction-map.md` for mapping details.
+Legacy experiments are archived under `archive/legacy-experiments/` and are gradually migrating into the direction-first structure. The archive preserves historical references and migration sources; current learning starts from `experiments/`. See `docs/curriculum/legacy-to-direction-map.md` for mapping details.

@@ -12,7 +12,7 @@ Control is where models, sensors, and actuators become reliable physical motion 
 
 ## Level Structure
 
-- `level-1-python`: **Current main product**. Pure Python implementations with no ROS2 / Gazebo / Isaac / GPU dependencies, runnable on Manjaro or any standard Python environment. Covers PID and trajectory optimization.
+- `level-1-python`: **Current main product**. Pure Python implementations with no ROS2 / Gazebo / Isaac / GPU dependencies, runnable in a Python 3.10+ runtime environment. Covers PID and trajectory optimization.
 - `level-2-ros2-bridge`: **Engineering bridge layer**. Connects Level 1 control algorithms into ROS2 / C++ / real robot software stacks, targeting Ubuntu environments.
 - `level-3-research`: **Research extension layer**. Robust control, MPC, force control, and safety constraints.
 
