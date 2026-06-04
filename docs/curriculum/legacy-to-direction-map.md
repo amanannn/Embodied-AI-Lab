@@ -17,8 +17,8 @@ English: [legacy-to-direction-map.en.md](./legacy-to-direction-map.en.md)
 | 旧实验归档位置 | 新方向归属 | 目标实验命名 |
 |---|---|---|
 | ~~`01-kalman-filter`~~ | `experiments/01-perception/level-1-python/` | `p01-state-estimation-kalman` (已迁移) |
-| `archive/legacy-experiments/02-particle-filter-mcl` | `experiments/02-slam-navigation/` | `s02-mcl-localization` |
-| `archive/legacy-experiments/03-ekf-slam` | `experiments/02-slam-navigation/` | `s03-ekf-slam` |
+| `archive/legacy-experiments/02-particle-filter-mcl` | `experiments/02-slam-navigation/level-1-python/` | `s02-mcl-localization` (已迁移) |
+| `archive/legacy-experiments/03-ekf-slam` | `experiments/02-slam-navigation/level-1-python/` | `s03-ekf-slam` (已迁移) |
 | `archive/legacy-experiments/04-robot-sim` | `experiments/09-sim-to-real/` | `r01-sim2d-foundation` |
 | `archive/legacy-experiments/05-pid-control` | `experiments/03-motion-control/` | `c01-pid-control-lab` |
 | `archive/legacy-experiments/06-robot-kinematics` | `experiments/07-manipulation/` | `m01-robot-kinematics` |

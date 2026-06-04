@@ -71,7 +71,7 @@ ROS2 / C++ 用来桥接真实机器人系统。
 | 方向 | 在本仓库中的角色 | 当前入口 |
 |---|---|---|
 | 01. 感知 | 提供第一个完整 Level 1 可运行基线。 | 从 `experiments/01-perception/level-1-python` 开始，内含传感器、滤波和基础视觉三组实验。 |
-| 02. SLAM 与导航 | 把状态估计扩展到定位、建图与规划闭环。 | 目前以候选实验页为主，建议先从 Grid Search 路径规划进入，再扩展到 MCL 与 EKF-SLAM。 |
+| 02. SLAM 与导航 | 把状态估计扩展到定位、建图与规划闭环。 | 已落地 Grid Search、MCL 与 EKF-SLAM 三组 Level 1 实验。 |
 | 03. 运动控制 | 提供从感知闭环走向行动闭环的入口。 | 当前以方向页和结构骨架承接 PID 与轨迹方向。 |
 | 04. 强化学习与模仿学习 | 在仿真基础成熟后承接策略学习。 | 当前以方向页和骨架为主。 |
 | 05. 世界模型 | 面向预测性建模与更强的决策推理。 | 当前是方向入口，后续落地锚点实验。 |
@@ -186,7 +186,7 @@ python scripts/aruco_pose.py --generate-marker          # 生成 ArUco marker
 python scripts/classic_vision.py --generate-sample --mode optical-flow  # 光流样例
 ```
 
-SLAM 与导航方向已经提供第一个 Level 1 路径规划实验。
+SLAM 与导航方向已经提供三组 Level 1 实验，覆盖已知地图路径规划、已知地图定位和基础 SLAM。
 
 ```bash
 cd experiments/02-slam-navigation/level-1-python
@@ -195,6 +195,12 @@ pip install -r requirements.txt
 # 实验 1：已知地图路径规划
 python scripts/grid_search.py --map maze --algorithm astar
 python scripts/grid_search.py --map maze --compare
+
+# 实验 2：蒙特卡洛定位
+python scripts/mcl_localization.py
+
+# 实验 3：扩展卡尔曼 SLAM
+python scripts/ekf_slam.py
 ```
 
 ### ROS2 / C++ 桥接路径

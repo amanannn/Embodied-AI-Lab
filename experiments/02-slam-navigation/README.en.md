@@ -18,15 +18,15 @@ SLAM and navigation turn state estimation into a real mobile-robot loop: localiz
 
 ## Representative Experiments
 
-The first path-planning lab is now implemented. Localization and SLAM labs remain candidates:
+Level 1 now includes three implemented core labs covering path planning, known-map localization, and basic SLAM:
 
 - `s01-grid-search` — A* and Dijkstra path planning (complete)
-- `s02-mcl-localization` — Monte Carlo Localization (candidate)
-- `s03-ekf-slam` — Extended Kalman Filter SLAM (candidate)
+- `s02-mcl-localization` — Monte Carlo Localization (complete)
+- `s03-ekf-slam` — Extended Kalman Filter SLAM (complete)
 
 ## Suggested Entry Point
 
-After completing the Kalman baseline, start with Grid Search path planning in [`level-1-python`](level-1-python/README.en.md), then expand into MCL localization and EKF-SLAM.
+After completing the Kalman baseline, enter [`level-1-python`](level-1-python/README.en.md): run Grid Search first, then MCL localization, then EKF-SLAM.
 
 ## Research Extensions
 

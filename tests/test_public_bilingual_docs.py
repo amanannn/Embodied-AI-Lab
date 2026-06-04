@@ -271,11 +271,11 @@ class PublicBilingualDocsTest(unittest.TestCase):
         self.assertEqual(zh.count("s01-"), 1)
         self.assertEqual(en.count("s01-"), 1)
         self.assertIn("`archive/legacy-experiments/07-path-planning` | `experiments/02-slam-navigation/level-1-python/` | `s01-grid-search` (已迁移)", map_zh)
-        self.assertIn("`archive/legacy-experiments/02-particle-filter-mcl` | `experiments/02-slam-navigation/` | `s02-mcl-localization`", map_zh)
-        self.assertIn("`archive/legacy-experiments/03-ekf-slam` | `experiments/02-slam-navigation/` | `s03-ekf-slam`", map_zh)
+        self.assertIn("`archive/legacy-experiments/02-particle-filter-mcl` | `experiments/02-slam-navigation/level-1-python/` | `s02-mcl-localization` (已迁移)", map_zh)
+        self.assertIn("`archive/legacy-experiments/03-ekf-slam` | `experiments/02-slam-navigation/level-1-python/` | `s03-ekf-slam` (已迁移)", map_zh)
         self.assertIn("`archive/legacy-experiments/07-path-planning` | `experiments/02-slam-navigation/level-1-python/` | `s01-grid-search` (migrated)", map_en)
-        self.assertIn("`archive/legacy-experiments/02-particle-filter-mcl` | `experiments/02-slam-navigation/` | `s02-mcl-localization`", map_en)
-        self.assertIn("`archive/legacy-experiments/03-ekf-slam` | `experiments/02-slam-navigation/` | `s03-ekf-slam`", map_en)
+        self.assertIn("`archive/legacy-experiments/02-particle-filter-mcl` | `experiments/02-slam-navigation/level-1-python/` | `s02-mcl-localization` (migrated)", map_en)
+        self.assertIn("`archive/legacy-experiments/03-ekf-slam` | `experiments/02-slam-navigation/level-1-python/` | `s03-ekf-slam` (migrated)", map_en)
 
     def test_legacy_archive_map_paths_exist(self) -> None:
         """映射表中声明的归档路径必须真实存在，不能指向不存在的旧目录。"""

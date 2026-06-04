@@ -71,7 +71,7 @@ This section emphasizes the repository state of each direction: where it sits to
 | Direction | Role in This Repository | Current Entry |
 |---|---|---|
 | 01. Perception | Provides the first complete runnable Level 1 baseline. | Start at `experiments/01-perception/level-1-python`, which contains sensor, filtering, and basic vision labs. |
-| 02. SLAM and Navigation | Extends estimation into localization, mapping, and planning loops. | Currently represented by candidate experiment pages; start with Grid Search path planning, then expand into MCL and EKF-SLAM. |
+| 02. SLAM and Navigation | Extends estimation into localization, mapping, and planning loops. | Provides three Level 1 labs: Grid Search, MCL, and EKF-SLAM. |
 | 03. Motion Control | Opens the path from sensing loops to action loops. | Currently represented by direction pages and structure for PID and trajectory work. |
 | 04. RL and Imitation | Adds policy learning once simulation anchors are mature. | Currently represented by direction pages and scaffold only. |
 | 05. World Models | Focuses on predictive modeling and stronger decision-making. | Currently a direction entry with future anchor experiments. |
@@ -186,7 +186,7 @@ python scripts/aruco_pose.py --generate-marker          # Generate ArUco marker
 python scripts/classic_vision.py --generate-sample --mode optical-flow  # Optical flow sample
 ```
 
-The SLAM and navigation direction now provides its first Level 1 path-planning lab.
+The SLAM and navigation direction now provides three Level 1 labs covering known-map path planning, known-map localization, and basic SLAM.
 
 ```bash
 cd experiments/02-slam-navigation/level-1-python
@@ -195,6 +195,12 @@ pip install -r requirements.txt
 # Experiment 1: Known-map path planning
 python scripts/grid_search.py --map maze --algorithm astar
 python scripts/grid_search.py --map maze --compare
+
+# Experiment 2: Monte Carlo Localization
+python scripts/mcl_localization.py
+
+# Experiment 3: Extended Kalman Filter SLAM
+python scripts/ekf_slam.py
 ```
 
 ### ROS2 / C++ bridge path

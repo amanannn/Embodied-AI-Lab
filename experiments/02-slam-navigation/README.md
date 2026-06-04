@@ -18,15 +18,15 @@ SLAM 与导航把状态估计扩展成真正的移动机器人闭环：定位、
 
 ## Representative Experiments
 
-当前已落地第一个路径规划实验，后续定位与 SLAM 实验仍为候选：
+当前 Level 1 已落地三组核心实验，覆盖路径规划、已知地图定位和基础 SLAM：
 
 - `s01-grid-search` — A* 与 Dijkstra 路径规划（已完成）
-- `s02-mcl-localization` — 蒙特卡洛定位（候选）
-- `s03-ekf-slam` — 扩展卡尔曼 SLAM（候选）
+- `s02-mcl-localization` — 蒙特卡洛定位（已完成）
+- `s03-ekf-slam` — 扩展卡尔曼 SLAM（已完成）
 
 ## Suggested Entry Point
 
-建议在完成卡尔曼滤波基线后，先进入 [`level-1-python`](level-1-python/README.md) 中的 Grid Search 路径规划，再扩展到 MCL 定位与 EKF-SLAM。
+建议在完成卡尔曼滤波基线后，进入 [`level-1-python`](level-1-python/README.md)：先运行 Grid Search 路径规划，再运行 MCL 定位，最后运行 EKF-SLAM。
 
 ## Research Extensions
 
