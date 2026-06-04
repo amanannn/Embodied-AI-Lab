@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PID Control Playground · Embodied AI Lab</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero" aria-labelledby="title">
+        <p class="eyebrow">Embodied AI Lab · Motion Control Level 1</p>
+        <h1 id="title">PID Control Playground</h1>
+        <p class="lead">
+          Tune feedback gains and watch a one-dimensional robot body move from
+          oscillation to stable tracking.
+        </p>
+      </section>
+
+      <section class="workspace" aria-label="Interactive PID simulator">
+        <aside class="panel controls">
+          <div class="panel-heading">
+            <span class="dot"></span>
+            <h2>Controller Gains</h2>
+          </div>
+
+          <label class="control">
+            <span>Kp <output id="kpValue">8.0</output></span>
+            <input id="kp" type="range" min="0" max="18" step="0.1" value="8.0" />
+          </label>
+
+          <label class="control">
+            <span>Ki <output id="kiValue">1.2</output></span>
+            <input id="ki" type="range" min="0" max="6" step="0.1" value="1.2" />
+          </label>
+
+          <label class="control">
+            <span>Kd <output id="kdValue">2.6</output></span>
+            <input id="kd" type="range" min="0" max="10" step="0.1" value="2.6" />
+          </label>
+
+          <label class="control">
+            <span>Target <output id="setpointValue">1.0</output> m</span>
+            <input id="setpoint" type="range" min="-1.5" max="2.0" step="0.1" value="1.0" />
+          </label>
+
+          <label class="control">
+            <span>Disturbance <output id="disturbanceValue">-1.5</output> N</span>
+            <input id="disturbance" type="range" min="-5" max="5" step="0.1" value="-1.5" />
+          </label>
+
+          <div class="actions">
+            <button id="runButton" type="button">Run Simulation</button>
+            <button id="resetButton" type="button" class="ghost">Reset</button>
+          </div>
+        </aside>
+
+        <section class="panel scope" aria-label="PID response plots">
+          <div class="panel-heading">
+            <span class="dot live"></span>
+            <h2>Closed-Loop Response</h2>
+          </div>
+          <p id="statusMessage" class="status" role="status">Preparing simulation...</p>
+          <canvas id="trajectoryCanvas" width="960" height="520" aria-label="Position and control response plot"></canvas>
+          <div class="legend" aria-label="Plot legend">
+            <span><i class="target"></i> target</span>
+            <span><i class="position"></i> position</span>
+            <span><i class="control-line"></i> control</span>
+          </div>
+        </section>
+
+        <section class="metrics" aria-label="Simulation metrics">
+          <article>
+            <span>Steady Error</span>
+            <strong id="steadyError">--</strong>
+          </article>
+          <article>
+            <span>Overshoot</span>
+            <strong id="overshoot">--</strong>
+          </article>
+          <article>
+            <span>Settling Time</span>
+            <strong id="settlingTime">--</strong>
+          </article>
+          <article>
+            <span>Peak Control</span>
+            <strong id="peakControl">--</strong>
+          </article>
+        </section>
+      </section>
+    </main>
+    <script id="initialPayload" type="application/json">__PID_INITIAL_PAYLOAD__</script>
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -18,13 +18,13 @@ Control is where models, sensors, and actuators become reliable physical motion 
 
 ## Representative Experiments
 
-- `c01-pid-control-lab`
+- `c01-pid-control-playground` (complete): Python + browser interactive PID control lab
 - `c02-trajectory-optimization`
 - future realtime bridge work
 
 ## Suggested Entry Point
 
-Start with PID, then use trajectory optimization to connect feedback control with smoother motion generation.
+Start with `c01-pid-control-playground` under `level-1-python`: tune `Kp / Ki / Kd` with sliders, observe overshoot, oscillation, settling time, and disturbance recovery, then use trajectory optimization to connect feedback control with smoother motion generation.
 
 ## Research Extensions
 

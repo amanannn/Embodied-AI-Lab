@@ -10,8 +10,33 @@ This directory is the **Level 1 entry** for the motion control direction. Level 
 
 | Experiment | Core Question | Status |
 |-----------|---------------|--------|
-| PID Control | How to use feedback control for stable target tracking? | Planned |
+| `c01-pid-control-playground` | How can interactive tuning build intuition for proportional, integral, and derivative feedback? | Complete |
 | Trajectory Optimization | How to generate smooth, feasible motion trajectories? | Planned |
+
+## Quick Start
+
+Run the browser-free simulation first to verify the Python model and JSON outputs:
+
+```bash
+python scripts/pid_playground.py --simulate
+```
+
+Then start the local interactive page:
+
+```bash
+python scripts/pid_playground.py --serve
+```
+
+Open the local URL printed by the script, tune `Kp / Ki / Kd`, target position, and disturbance force, then observe trajectory, control effort, and metrics.
+
+## Completed Labs
+
+### `c01-pid-control-playground`
+
+- Pure Python PID simulation core: one-dimensional mass-damper plant, short external disturbance, error/control logging.
+- Standard-library HTTP service: no FastAPI, React, or Node.js toolchain required.
+- Native HTML/CSS/JS frontend: sliders, Canvas plot, overshoot, steady-state error, settling time, and peak control.
+- Tutorial: [pid_playground.en.md](./tutorials/pid_playground.en.md)
 
 ## Relationship to Level 2
 

@@ -18,13 +18,13 @@ English: [README.en.md](./README.en.md)
 
 ## Representative Experiments
 
-- `c01-pid-control-lab`
+- `c01-pid-control-playground`（已完成）：Python + 浏览器互动 PID 控制实验
 - `c02-trajectory-optimization`
 - 后续实时桥接工作
 
 ## Suggested Entry Point
 
-从 PID 入手，再用轨迹优化把反馈控制与更平滑的运动生成连接起来。
+从 `level-1-python` 的 `c01-pid-control-playground` 入手，先用滑块观察 `Kp / Ki / Kd` 如何改变超调、振荡、稳定时间和抗扰恢复，再用轨迹优化把反馈控制与更平滑的运动生成连接起来。
 
 ## Research Extensions
 

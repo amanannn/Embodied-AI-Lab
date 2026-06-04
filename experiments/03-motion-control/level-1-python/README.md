@@ -10,8 +10,33 @@ English: [README.en.md](./README.en.md)
 
 | 实验 | 核心问题 | 状态 |
 |------|---------|------|
-| PID 控制 | 如何用反馈控制让系统稳定跟踪目标？ | 规划中 |
+| `c01-pid-control-playground` | 如何通过互动调参理解 PID 的比例、积分、微分作用？ | 已完成 |
 | 轨迹优化 | 如何生成平滑、可行的运动轨迹？ | 规划中 |
+
+## 快速开始
+
+先运行无浏览器版本，确认仿真和 JSON 输出正常：
+
+```bash
+python scripts/pid_playground.py --simulate
+```
+
+再启动本地互动页面：
+
+```bash
+python scripts/pid_playground.py --serve
+```
+
+浏览器打开脚本打印的本地地址，拖动 `Kp / Ki / Kd`、目标位置和扰动力滑块，观察轨迹、控制量和指标变化。
+
+## 已完成实验
+
+### `c01-pid-control-playground`
+
+- 纯 Python PID 仿真核心：一维质量-阻尼系统、短时外力扰动、误差/控制量记录。
+- 标准库 HTTP 服务：无需 FastAPI、React 或 Node.js 工程链路。
+- 原生 HTML/CSS/JS 前端：滑块调参、Canvas 曲线、超调量、稳态误差、稳定时间和峰值控制量。
+- 教程：[pid_playground.md](./tutorials/pid_playground.md)
 
 ## 与 Level 2 的关系
 
