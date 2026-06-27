@@ -1,0 +1,33 @@
+# 西安电子科技大学 · 具身智能微专业笔记
+
+English: [README.en.md](./README.en.md)
+
+## 背景
+
+西安电子科技大学开设了面向本科生的具身智能微专业。本目录存放该微专业的课程笔记、实验记录和学习总结。
+
+这是国内最早一批面向本科生的具身智能系统性课程之一。记录这些内容的目的：
+
+- 保留第一手学习路径和踩坑经验
+- 为后续学习者提供可参考的笔记模板
+- 与 Embodied AI Lab 的实验互相印证
+
+## 使用方式
+
+1. 在本目录下按课程或主题创建 `.md` 文件
+2. 写完后由 Claude 协助完善格式、补充交叉引用
+3. 完成的笔记可选择性地同步到公开仓库
+
+## 目录结构
+
+```text
+docs/xidian-micro-major/
+├── README.md          ← 本文件
+├── README.en.md       ← 英文镜像
+└── *.md               ← 课程笔记（按主题命名）
+```
+
+## 相关文档
+
+- [Embodied AI Lab 课程全景](../../README.md)
+- [Python-first, ROS2-ready 路线说明](../curriculum/python-first-ros2-ready.md)
