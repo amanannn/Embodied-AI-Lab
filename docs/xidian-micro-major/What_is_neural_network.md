@@ -89,3 +89,5 @@ $$w_{new} = w_{old} - \eta \cdot \nabla L$$
 ---
 
 *笔记状态：第二讲初稿，待补充具体计算实例。*
+
+*相关笔记：[具身智能感知基础：机器视觉与深度学习](./具身智能感知基础：机器视觉与深度学习.md)、[从传统图像处理到深度学习](./From_traditional_image_processing_to_deep_learning.md)*
