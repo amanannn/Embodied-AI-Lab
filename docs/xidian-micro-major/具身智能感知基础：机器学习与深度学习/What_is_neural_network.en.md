@@ -90,4 +90,4 @@ Next iteration (repeat until convergence)
 
 *Note status: Second lecture, first draft. Pending concrete computation examples.*
 
-*Related notes: [Embodied Intelligence Perception Fundamentals: Machine Vision and Deep Learning](./具身智能感知基础：机器视觉与深度学习.en.md), [From Traditional Image Processing to Deep Learning](./From_traditional_image_processing_to_deep_learning.en.md)*
+*Related notes: [Embodied Intelligence Perception Fundamentals: Machine Vision and Deep Learning](./具身智能感知基础：机器视觉与深度学习.en.md), [From Traditional Image Processing to Deep Learning](./From_traditional_image_processing_to_deep_learning.en.md), [What is a Convolutional Network](./What_is_Convolution_network.en.md), [Commonly Used Convolution Operators](./Commonly_used_convolution_operators.en.md)*

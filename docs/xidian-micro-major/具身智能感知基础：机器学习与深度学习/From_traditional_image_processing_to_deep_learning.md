@@ -119,4 +119,4 @@ $$\text{output}(i,j) = \sum_{m}\sum_{n} \text{input}(i+m, j+n) \cdot \text{kerne
 
 *笔记状态：初稿完成，待关联实验代码。*
 
-*相关笔记：[具身智能感知基础：机器视觉与深度学习](./具身智能感知基础：机器视觉与深度学习.md)、[什么是神经网络](./What_is_neural_network.md)*
+*相关笔记：[具身智能感知基础：机器视觉与深度学习](./具身智能感知基础：机器视觉与深度学习.md)、[什么是神经网络](./What_is_neural_network.md)、[什么是卷积网络](./What_is_Convolution_network.md)、[常用卷积算子](./Commonly_used_convolution_operators.md)*

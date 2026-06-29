@@ -119,4 +119,4 @@ What this lecture means for embodied intelligence:
 
 *Note status: First draft complete. Pending experiment code cross-references.*
 
-*Related notes: [Embodied Intelligence Perception Fundamentals: Machine Vision and Deep Learning](./具身智能感知基础：机器视觉与深度学习.en.md), [What is a Neural Network](./What_is_neural_network.en.md)*
+*Related notes: [Embodied Intelligence Perception Fundamentals: Machine Vision and Deep Learning](./具身智能感知基础：机器视觉与深度学习.en.md), [What is a Neural Network](./What_is_neural_network.en.md), [What is a Convolutional Network](./What_is_Convolution_network.en.md), [Commonly Used Convolution Operators](./Commonly_used_convolution_operators.en.md)*

@@ -22,9 +22,18 @@ English: [README.en.md](./README.en.md)
 
 ```text
 docs/xidian-micro-major/
-├── README.md          ← 本文件
-├── README.en.md       ← 英文镜像
-└── *.md               ← 课程笔记（按主题命名）
+├── README.md
+├── README.en.md
+├── 具身智能感知基础：机器学习与深度学习/    ← 第一模块
+│   ├── 具身智能感知基础：机器视觉与深度学习.md
+│   ├── What_is_neural_network.md
+│   ├── From_traditional_image_processing_to_deep_learning.md
+│   ├── What_is_Convolution_network.md
+│   ├── Commonly_used_convolution_operators.md
+│   └── *.en.md                              ← 英文镜像
+└── 具身智能认知进阶：多模态大模型与语义理解/  ← 第二模块
+    ├── How_to_Build_and_Train_a_Neural_Network_p1.md
+    └── *.en.md                              ← 英文镜像
 ```
 
 ## 相关文档

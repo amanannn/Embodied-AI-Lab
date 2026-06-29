@@ -22,9 +22,18 @@ This is one of the earliest systematic embodied AI courses for undergraduates in
 
 ```text
 docs/xidian-micro-major/
-├── README.md          ← this file
-├── README.en.md       ← English mirror
-└── *.md               ← course notes (named by topic)
+├── README.md
+├── README.en.md
+├── Embodied Perception Basics: ML & DL/        ← Module 1
+│   ├── Embodied Perception Fundamentals: Machine Vision & DL.md
+│   ├── What_is_neural_network.md
+│   ├── From_traditional_image_processing_to_deep_learning.md
+│   ├── What_is_Convolution_network.md
+│   ├── Commonly_used_convolution_operators.md
+│   └── *.en.md                                  ← English mirrors
+└── Advanced Cognition: Multimodal LLMs & Semantic Understanding/  ← Module 2
+    ├── How_to_Build_and_Train_a_Neural_Network_p1.md
+    └── *.en.md                                  ← English mirrors
 ```
 
 ## Related Documentation
