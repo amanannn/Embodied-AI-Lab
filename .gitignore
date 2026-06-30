@@ -51,6 +51,9 @@ cmake_install.cmake
 # Agent workflow files (not course content)
 docs/xidian-micro-major/CLAUDE*
 
+# Course reference PDFs (content extracted to .md notes)
+docs/xidian-micro-major/**/*.pdf
+
 # OS
 .DS_Store
 Thumbs.db
