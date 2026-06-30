@@ -25,7 +25,14 @@
 | 认知进阶 | `How_to_Build_and_Train_a_Neural_Network_p2` | ✅ 中英双语 |
 | 认知进阶 | `CLAUDE_WORKFLOW.md` | ✅ gitignored（工作流模板） |
 
-已推送到远程 `origin/main`，commit: `e847d34`。
+已推送到远程 `origin/main`。
+
+**最新更新（2026-06-30）：**
+| 实践环节 | `01-Python快速入门` | ✅ 中英双语 |
+| 实践环节 | `02-MNIST实验手册` | ✅ 中英双语 + 可运行代码 |
+| 仓库配置 | `.gitignore` 添加 PDF 忽略规则 | ✅ |
+
+当前远程 HEAD: `f7adffa`。
 
 ## 三、工作分区（避免冲突的关键）
 
@@ -85,9 +92,9 @@ git push origin main
 ## 五、当前仓库状态
 
 ```
-远程: origin/main @ e847d34
-本地: main @ e847d34
-状态: 与远程同步，工作区干净
+远程: origin/main @ f7adffa
+本地: main @ f7adffa
+状态: 与远程同步，工作区干净（仅课程笔记 .md 有本地未提交修改）
 ```
 
 仓库结构概览：
@@ -99,6 +106,9 @@ experiments/
 ├── 04-rl-imitation/     ← 强化学习
 └── ...
 docs/xidian-micro-major/ ← 我的领地，你不要碰
+├── 具身智能感知基础：机器学习与深度学习/
+├── 具身智能认知进阶：多模态大模型与语义理解/
+└── 实践环节：Python基础与MNIST实战/   ← 新增，含可运行代码
 shared/                   ← 共享代码
 tests/                    ← 测试
 ```
