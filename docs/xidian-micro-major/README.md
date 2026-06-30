@@ -33,6 +33,7 @@ docs/xidian-micro-major/
 │   └── *.en.md                              ← 英文镜像
 └── 具身智能认知进阶：多模态大模型与语义理解/  ← 第二模块
     ├── How_to_Build_and_Train_a_Neural_Network_p1.md
+    ├── How_to_Build_and_Train_a_Neural_Network_p2.md
     └── *.en.md                              ← 英文镜像
 ```
 

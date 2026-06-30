@@ -154,6 +154,6 @@ $$w_{new} = w_{old} - \eta \cdot \nabla L_{单个或少量样本}$$
 
 ---
 
-*笔记状态：上篇初稿完成，下篇待补充正则化细节、学习率调度、更多优化器变体。*
+*笔记状态：上篇初稿完成。下篇已覆盖 CNN 实战、硬件、GAN，见 [Part 2](./How_to_Build_and_Train_a_Neural_Network_p2.md)。*
 
-*相关笔记：[什么是神经网络](../具身智能感知基础：机器学习与深度学习/What_is_neural_network.md)、[什么是卷积网络](../具身智能感知基础：机器学习与深度学习/What_is_Convolution_network.md)*
+*相关笔记：[什么是神经网络](../具身智能感知基础：机器学习与深度学习/What_is_neural_network.md)、[什么是卷积网络](../具身智能感知基础：机器学习与深度学习/What_is_Convolution_network.md)、[Part 2: CNN 实战与 GAN](./How_to_Build_and_Train_a_Neural_Network_p2.md)*

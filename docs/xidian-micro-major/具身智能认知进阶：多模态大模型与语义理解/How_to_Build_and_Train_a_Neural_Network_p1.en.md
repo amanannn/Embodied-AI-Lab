@@ -154,6 +154,6 @@ $$w_{new} = w_{old} - \eta \cdot \nabla L_{\text{single or small batch}}$$
 
 ---
 
-*Note status: Part 1 — first draft complete. Part 2 to cover: regularization details, learning rate scheduling, more optimizer variants.*
+*Note status: Part 1 — first draft complete. Part 2 now covers CNN hands-on, hardware, and GANs. See [Part 2](./How_to_Build_and_Train_a_Neural_Network_p2.en.md).*
 
-*Related notes: [What is a Neural Network](../具身智能感知基础：机器学习与深度学习/What_is_neural_network.en.md), [What is a Convolutional Network](../具身智能感知基础：机器学习与深度学习/What_is_Convolution_network.en.md)*
+*Related notes: [What is a Neural Network](../具身智能感知基础：机器学习与深度学习/What_is_neural_network.en.md), [What is a Convolutional Network](../具身智能感知基础：机器学习与深度学习/What_is_Convolution_network.en.md), [Part 2: CNN Hands-on & GANs](./How_to_Build_and_Train_a_Neural_Network_p2.en.md)*

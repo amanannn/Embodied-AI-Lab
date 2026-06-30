@@ -33,6 +33,7 @@ docs/xidian-micro-major/
 │   └── *.en.md                                  ← English mirrors
 └── Advanced Cognition: Multimodal LLMs & Semantic Understanding/  ← Module 2
     ├── How_to_Build_and_Train_a_Neural_Network_p1.md
+    ├── How_to_Build_and_Train_a_Neural_Network_p2.md
     └── *.en.md                                  ← English mirrors
 ```
 
