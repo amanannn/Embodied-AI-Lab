@@ -24,17 +24,27 @@ English: [README.en.md](./README.en.md)
 docs/xidian-micro-major/
 ├── README.md
 ├── README.en.md
-├── 具身智能感知基础：机器学习与深度学习/    ← 第一模块
+├── CLAUDE_WORKFLOW.md
+├── 具身智能感知基础：机器学习与深度学习/    ← 第一模块（理论）
 │   ├── 具身智能感知基础：机器视觉与深度学习.md
 │   ├── What_is_neural_network.md
 │   ├── From_traditional_image_processing_to_deep_learning.md
 │   ├── What_is_Convolution_network.md
 │   ├── Commonly_used_convolution_operators.md
 │   └── *.en.md                              ← 英文镜像
-└── 具身智能认知进阶：多模态大模型与语义理解/  ← 第二模块
-    ├── How_to_Build_and_Train_a_Neural_Network_p1.md
-    ├── How_to_Build_and_Train_a_Neural_Network_p2.md
-    └── *.en.md                              ← 英文镜像
+├── 具身智能认知进阶：多模态大模型与语义理解/  ← 第二模块（理论）
+│   ├── How_to_Build_and_Train_a_Neural_Network_p1.md
+│   ├── How_to_Build_and_Train_a_Neural_Network_p2.md
+│   └── *.en.md                              ← 英文镜像
+└── 实践环节：Python基础与MNIST实战/          ← 第三模块（实践）
+    ├── 01-Python快速入门.md
+    ├── 01-Python快速入门.en.md
+    ├── 02-MNIST实验手册.md
+    ├── 02-MNIST实验手册.en.md
+    └── code/
+        ├── requirements.txt
+        ├── mnist_train.py
+        └── mnist_infer.py
 ```
 
 ## 相关文档

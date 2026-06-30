@@ -24,17 +24,27 @@ This is one of the earliest systematic embodied AI courses for undergraduates in
 docs/xidian-micro-major/
 ├── README.md
 ├── README.en.md
-├── Embodied Perception Basics: ML & DL/        ← Module 1
+├── CLAUDE_WORKFLOW.md
+├── Embodied Perception Basics: ML & DL/        ← Module 1 (Theory)
 │   ├── Embodied Perception Fundamentals: Machine Vision & DL.md
 │   ├── What_is_neural_network.md
 │   ├── From_traditional_image_processing_to_deep_learning.md
 │   ├── What_is_Convolution_network.md
 │   ├── Commonly_used_convolution_operators.md
 │   └── *.en.md                                  ← English mirrors
-└── Advanced Cognition: Multimodal LLMs & Semantic Understanding/  ← Module 2
-    ├── How_to_Build_and_Train_a_Neural_Network_p1.md
-    ├── How_to_Build_and_Train_a_Neural_Network_p2.md
-    └── *.en.md                                  ← English mirrors
+├── Advanced Cognition: Multimodal LLMs & Semantic Understanding/  ← Module 2 (Theory)
+│   ├── How_to_Build_and_Train_a_Neural_Network_p1.md
+│   ├── How_to_Build_and_Train_a_Neural_Network_p2.md
+│   └── *.en.md                                  ← English mirrors
+└── Practice: Python Basics & MNIST Hands-on/    ← Module 3 (Practice)
+    ├── 01-Python快速入门.md
+    ├── 01-Python快速入门.en.md
+    ├── 02-MNIST实验手册.md
+    ├── 02-MNIST实验手册.en.md
+    └── code/
+        ├── requirements.txt
+        ├── mnist_train.py
+        └── mnist_infer.py
 ```
 
 ## Related Documentation
