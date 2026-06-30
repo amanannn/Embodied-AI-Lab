@@ -48,6 +48,9 @@ cmake_install.cmake
 *.swo
 .worktrees/
 
+# Agent workflow files (not course content)
+docs/xidian-micro-major/CLAUDE*
+
 # OS
 .DS_Store
 Thumbs.db
