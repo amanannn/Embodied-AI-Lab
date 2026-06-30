@@ -127,7 +127,7 @@ def main():
     test_loader = DataLoader(test_dataset, batch_size=64, shuffle=True)
 
     # ---------- 加载模型权重 ----------
-    model_path = "code/mnist_model.pth"
+    model_path = "mnist_model.pth"
     print(f"[模型] 正在加载权重: {model_path}")
     model = SimpleCNN().to(device)
     model.load_state_dict(torch.load(model_path, map_location=device))

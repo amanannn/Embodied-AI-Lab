@@ -207,15 +207,15 @@ def main():
         )
 
     # ---------- 保存模型 ----------
-    save_path = "code/mnist_model.pth"
+    save_path = "mnist_model.pth"
     torch.save(model.state_dict(), save_path)
     print(f"\n[模型] 权重已保存至 {save_path}")
 
     # ---------- 可视化：训练损失曲线 ----------
-    plot_training_curve(all_batch_losses, save_path="code/training_curve.png")
+    plot_training_curve(all_batch_losses, save_path="training_curve.png")
 
-    # ---------- 可视化：测试集预测样例 ----------
-    plot_sample_predictions(model, test_loader, device, save_path="code/sample_predictions.png")
+    # 可视化：测试集预测样例
+    plot_sample_predictions(model, test_loader, device, save_path="sample_predictions.png")
 
     print("\n[完成] 全部任务执行完毕！")
 
