@@ -45,6 +45,13 @@ docs/xidian-micro-major/
         ├── requirements.txt
         ├── mnist_train.py
         └── mnist_infer.py
+└── 实践环节：图像超分辨率实战/               ← 第四模块（实践）
+    ├── 01-图像超分辨率实验手册.md
+    ├── 01-图像超分辨率实验手册.en.md
+    └── code/
+        ├── requirements.txt
+        ├── train_sr.py
+        └── infer_sr.py
 ```
 
 ## 相关文档
