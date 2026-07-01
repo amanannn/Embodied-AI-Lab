@@ -1,31 +1,29 @@
 #!/bin/bash
-# CIFAR-10 数据集下载脚本（从 Hugging Face 镜像）
-export HF_ENDPOINT=https://hf-mirror.com
+# CIFAR-10 数据集下载脚本
+set -e
 
-pip install huggingface_hub -q
+mkdir -p ./data
+FILE="./data/cifar-10-python.tar.gz"
+EXTRACT_DIR="./data/cifar-10-batches-py"
 
-python3 << 'EOF'
-from huggingface_hub import hf_hub_download
-import tarfile, os
+if [ -d "$EXTRACT_DIR" ]; then
+    echo "数据已就绪: $EXTRACT_DIR"
+    echo "可以直接训练: python train_sr.py"
+    exit 0
+fi
 
-print("正在从 HF 镜像下载 CIFAR-10 (170MB)...")
-path = hf_hub_download(
-    repo_id="cifar10",
-    repo_type="dataset",
-    filename="cifar-10-python.tar.gz",
-    local_dir="./data"
-)
-print(f"下载完成: {path}")
+# 清理可能损坏的旧文件
+rm -f "$FILE"
 
-# 解压（torchvision 也能自动解压，这里显式解压确保万无一失）
-extract_dir = "./data/cifar-10-batches-py"
-if not os.path.exists(extract_dir):
-    print("正在解压...")
-    with tarfile.open(path, "r:gz") as tar:
-        tar.extractall(path="./data", filter="data")
-    print(f"解压完成: {extract_dir}")
-else:
-    print("数据已就绪")
+echo "正在下载 CIFAR-10 (170MB)..."
+# HF 镜像直链，失败回退官网
+wget -c -O "$FILE" --timeout=30 --tries=3 \
+    https://hf-mirror.com/datasets/cifar10/resolve/main/cifar-10-python.tar.gz \
+    || wget -c -O "$FILE" --timeout=60 --tries=5 \
+    https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz
 
-print("\n可以开始训练了: python train_sr.py")
-EOF
+echo "下载完成，正在解压..."
+tar -xzf "$FILE" -C ./data/
+echo "解压完成: $EXTRACT_DIR"
+echo ""
+echo "可以开始训练了: python train_sr.py"
