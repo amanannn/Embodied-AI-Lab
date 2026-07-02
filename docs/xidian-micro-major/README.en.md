@@ -36,23 +36,9 @@ docs/xidian-micro-major/
 │   ├── How_to_Build_and_Train_a_Neural_Network_p1.md
 │   ├── How_to_Build_and_Train_a_Neural_Network_p2.md
 │   └── *.en.md                                  ← English mirrors
-└── Practice: Python Basics & MNIST Hands-on/    ← Module 3 (Practice)
-    ├── 01-Python快速入门.md
-    ├── 01-Python快速入门.en.md
-    ├── 02-MNIST实验手册.md
-    ├── 02-MNIST实验手册.en.md
-    └── code/
-        ├── requirements.txt
-        ├── mnist_train.py
-        └── mnist_infer.py
-└── Practice: Image Super-Resolution/           ← Module 4 (Practice)
-    ├── 01-图像超分辨率实验手册.md
-    ├── 01-图像超分辨率实验手册.en.md
-    └── code/
-        ├── requirements.txt
-        ├── train_sr.py
-        └── infer_sr.py
 ```
+
+> Practice modules have been moved to [`labs/`](../../labs/): `python-mnist/` and `image-super-res/`.
 
 ## Related Documentation
 

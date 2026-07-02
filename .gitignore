@@ -54,10 +54,10 @@ docs/xidian-micro-major/CLAUDE*
 # Course reference PDFs (content extracted to .md notes)
 docs/xidian-micro-major/**/*.pdf
 
-# MNIST experiment outputs
-docs/xidian-micro-major/**/code/data/
-docs/xidian-micro-major/**/code/*.pth
-docs/xidian-micro-major/**/code/*.png
+# Lab experiment outputs
+labs/**/code/data/
+labs/**/code/*.pth
+labs/**/code/*.png
 
 # OS
 .DS_Store

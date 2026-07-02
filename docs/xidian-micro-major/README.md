@@ -36,23 +36,9 @@ docs/xidian-micro-major/
 │   ├── How_to_Build_and_Train_a_Neural_Network_p1.md
 │   ├── How_to_Build_and_Train_a_Neural_Network_p2.md
 │   └── *.en.md                              ← 英文镜像
-└── 实践环节：Python基础与MNIST实战/          ← 第三模块（实践）
-    ├── 01-Python快速入门.md
-    ├── 01-Python快速入门.en.md
-    ├── 02-MNIST实验手册.md
-    ├── 02-MNIST实验手册.en.md
-    └── code/
-        ├── requirements.txt
-        ├── mnist_train.py
-        └── mnist_infer.py
-└── 实践环节：图像超分辨率实战/               ← 第四模块（实践）
-    ├── 01-图像超分辨率实验手册.md
-    ├── 01-图像超分辨率实验手册.en.md
-    └── code/
-        ├── requirements.txt
-        ├── train_sr.py
-        └── infer_sr.py
 ```
+
+> 实践模块已迁移至 [`labs/`](../../labs/) 目录：`python-mnist/`、`image-super-res/`。
 
 ## 相关文档
 
