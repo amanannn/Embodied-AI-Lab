@@ -31,6 +31,7 @@ docs/xidian-micro-major/
 │   ├── From_traditional_image_processing_to_deep_learning.md
 │   ├── What_is_Convolution_network.md
 │   ├── Commonly_used_convolution_operators.md
+│   ├── Computer_Vision_&_Image_Super-resolution.md
 │   └── *.en.md                              ← 英文镜像
 ├── 具身智能认知进阶：多模态大模型与语义理解/  ← 第二模块（理论）
 │   ├── How_to_Build_and_Train_a_Neural_Network_p1.md

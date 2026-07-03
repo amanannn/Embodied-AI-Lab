@@ -31,6 +31,7 @@ docs/xidian-micro-major/
 │   ├── From_traditional_image_processing_to_deep_learning.md
 │   ├── What_is_Convolution_network.md
 │   ├── Commonly_used_convolution_operators.md
+│   ├── Computer_Vision_&_Image_Super-resolution.md
 │   └── *.en.md                                  ← English mirrors
 ├── Advanced Cognition: Multimodal LLMs & Semantic Understanding/  ← Module 2 (Theory)
 │   ├── How_to_Build_and_Train_a_Neural_Network_p1.md
