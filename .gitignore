@@ -58,6 +58,8 @@ docs/xidian-micro-major/**/*.pdf
 labs/**/code/data/
 labs/**/code/*.pth
 labs/**/code/*.png
+labs/**/srcnn/checkpoints/
+labs/**/srcnn/results/
 
 # OS
 .DS_Store
