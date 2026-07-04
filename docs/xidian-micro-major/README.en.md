@@ -37,6 +37,7 @@ docs/xidian-micro-major/
 │   ├── How_to_Build_and_Train_a_Neural_Network_p1.md
 │   ├── How_to_Build_and_Train_a_Neural_Network_p2.md
 │   ├── What_is_attention.md
+│   ├── What_is_Recurrent_Neural_Networks.md
 │   └── *.en.md                                  ← English mirrors
 ```
 
