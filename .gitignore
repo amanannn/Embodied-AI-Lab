@@ -61,14 +61,6 @@ labs/**/code/*.png
 labs/**/srcnn/checkpoints/
 labs/**/srcnn/results/
 
-# YOLO experiment outputs
-labs/yolo-sam3/runs/
-labs/yolo-sam3/*.pt
-
-# User experiment workspace
-YOLO_&_SAM3/
-srcnn/
-
 # OS
 .DS_Store
 Thumbs.db
