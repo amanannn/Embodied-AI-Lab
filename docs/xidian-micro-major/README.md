@@ -38,6 +38,7 @@ docs/xidian-micro-major/
 │   ├── How_to_Build_and_Train_a_Neural_Network_p2.md
 │   ├── What_is_attention.md
 │   ├── What_is_Recurrent_Neural_Networks.md
+│   ├── 大模型时代的具身智能.md
 │   └── *.en.md                              ← 英文镜像
 ```
 
