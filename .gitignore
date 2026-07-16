@@ -61,6 +61,9 @@ labs/**/code/*.png
 labs/**/srcnn/checkpoints/
 labs/**/srcnn/results/
 
+# IDE
+.vscode/browse.vc.db
+
 # OS
 .DS_Store
 Thumbs.db
